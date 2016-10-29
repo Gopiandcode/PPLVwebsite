@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html style="background-color: #BBDEFB">
 <head>
 <title>Alternate Design for the Website</title>
 
@@ -19,6 +19,13 @@
 <!-- custom theme -->
 <link rel="stylesheet" type="text/css" href="style.css">
 
+
+<!-- required files for animations-->
+<link rel="stylesheet" href="./dist/animate.css">
+
+<script src="./dist/scrolla.jquery.min.js"></script>
+
+
 <!-- A bit of Js which allows the hero image to fill the loaded screen -->
 <script>
 $(document).ready(function() {
@@ -29,11 +36,35 @@ $(document).ready(function() {
 	$('#hero >div').css('padding-top', (windowHeight)*0.2287);
 	$('#hero').css('padding-botom', 'auto');
 	};
+
+	//data-animate="bounceIn" data-duration="1.0s" data-delay="0.1s" data-offset="100
+	$("animate").css("data-animate","bounceIn");
+	$("animate").css("data-duration","1.0s");
+	$("animate").css("data-delay","0.1s");
+
 	setHeight();
+	$("body").css("display", "none");
+	$("body").fadeIn(250);
+	$('.animate').scrolla();
+
+	effect = $(".animate").fadeTo(0, 0);
+
+$(window).scroll(function(d,h) {
+    effect.each(function(i) {
+        a = $(this).offset().top + $(this).height();
+        b = $(window).scrollTop() + $(window).height();
+        if (a < b) $(this).fadeTo(500,1);
+    });
+});
+
+
+
+
 });
 
 
 </script>
+
 
 </head>
 
@@ -47,26 +78,26 @@ $(document).ready(function() {
 				<span class="sr-only">Toggle navigation</span>
 				<span> Menu </span>
 			</button>
-			<a class="navbar-brand navBlue" href="index.html">PPLV</a>
+			<a class="navbar-brand navBlue transition" href="index.html">PPLV</a>
 		</div>
-			
+
 		<div class="collapse navbar-collapse" id="navcollapse">
 			<ul class="nav navbar-nav navbar-center">
 				<li class="dropdown"></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right navBlue" style="text-align: center;">
-				<li class="active"><a href="index.html">Home</a></li>
-		
-				
-				<li><a href="index.html#about">About the Area</a></li>
+				<li class="active"><a href="index.html" class="transition">Home</a></li>
 
-				<li><a href="history.html">History of Area</a></li>
 
-				<li><a href="research.html">UCL Research Team</a></li>
-				
-				<li><a href="research.html#impact">Impact</a></li>
+				<li><a href="index.html#about" class="transition">About the Area</a></li>
 
-				<li><a href="meta.html">About this site</a></li>	
+				<li><a href="history.html" class="transition">History of Area</a></li>
+
+				<li><a href="research.html" class="transition">UCL Research Team</a></li>
+
+				<li><a href="research.html#impact" class="transition">Impact</a></li>
+
+				<li><a href="meta.html" class="transition">About this site</a></li>
 			</ul>
 		</div>
 	</div>
@@ -88,47 +119,47 @@ $(document).ready(function() {
 	<div id="content" style="margin-top: 0;">
 	<!-- what will this site tell you? -->
 	<div class="row">
-		<div class="col-md-12 shadowLight mainPage" style="z-index: 8; background-color: #FFFFFF;" id="about">
+		<div class="col-md-12 shadowLight mainPage animate" style="z-index: 8; background-color: #FFFFFF;" id="about">
 			<div>
-			<h3> What is PPLV?</h3>
-			<p style="font-size: 1.2em; line-height: 2em; padding: 5px">PPLV is a research area focused on Computational Logic and it's applications to other areas.</br>Research Projects in this area often either seek to develop new computational logic theories or to use them to create rigorous mathematical models that accurately describe and predict physical systems.</br></br></p>
-			<h4>Wait...What on earth does that mean?</h4>
+			<h3 class="animate"> What is PPLV?</h3>
+			<p style="font-size: 1.2em; line-height: 2em; padding: 5px" class="animate">PPLV is a research area focused on Computational Logic and it's applications to other areas.</br>Research Projects in this area often either seek to develop new computational logic theories or to use them to create rigorous mathematical models that accurately describe and predict physical systems.</br></br></p>
+			<h4 class="animate">Wait...What on earth does that mean?</h4>
 			</div>
-			<span class="glyphicon glyphicon-menu-down visible-sm"></span>
+			<span class="glyphicon glyphicon-menu-down visible-sm animate"></span>
 		</div>
 	</div>
-	
+
 	<!-- why does this site exist? -->
 	<div class="row">
 		<div class="col-md-12 shadowLight contentGray mainPage" style="z-index: 6; font-family: 'Open Sans', sans-serif;">
-			<div class="divider shadowLight">
-			<h3>What is Computational Logic?</br></h3>
-			<p>As PPLV is a research area based around the core concept of Computational Logic, before moving forward, it's probably best to first <strong><big>explain what logic is...</big></strong><br></br></p>
+			<div class="divider shadowLight animate">
+			<h3 class="animate">What is Computational Logic?</br></h3>
+			<p class="animate">As PPLV is a research area based around the core concept of Computational Logic, before moving forward, it's probably best to first <strong><big>explain what logic is...</big></strong><br></br></p>
 			</div>
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs" style="height:300px; width: 300px; margin-bottom: 30px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs animate" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs animate" style="height:300px; width: 300px; margin-bottom: 30px;"></img>
 			</br>
 			<div class="divider shadowLight">
 			<div>
-			<h4><b>A Brief Introduction to Logic</b></h4>
-			<p style="font-size:0.8em; font-family: 'Open Sans', sans-serif;"><i>Note: For the purpose of brevity, this overview is very rough - if you are interested, check the reference for links that can explain this topic in greater detail</i></p>
+			<h4 class="animate"><b>A Brief Introduction to Logic</b></h4>
+			<p style="font-size:0.8em; font-family: 'Open Sans', sans-serif;" class="animate"><i>Note: For the purpose of brevity, this overview is very rough - if you are interested, check the reference for links that can explain this topic in greater detail</i></p>
 			</div>
 			<div>
-			<p><b>Logic</b>, in the mathematical sense is the study of developing rules and operations to describe concepts.
+			<p class="animate"><b>Logic</b>, in the mathematical sense is the study of developing rules and operations to describe concepts.
 			In Computer Science, Logic is specifically used to <i>describe <b>Computational Algorithms</b></i>.</br></br>
 			</div>
-			<div style="font-size: 1.2em; line-height: 2em; padding: 5px">
+			<div style="font-size: 1.2em; line-height: 2em; padding: 5px" class="animate">
 			An analogous example which may illustrate the concept more clearly is <b>Boolean Logic</b> and it's <i>relationship with circuits</i>.</br></br>
 			In Boolean Logic, values are either <b>True (1)</b> or <b>False (0)</b> and there exist operators (<b>AND</b>, <b>OR</b>, <b>XOR</b> etc.) which return <b>True</b> or <b>False</b>, depending on their input. As these exact operations and values are representable using circuits, we could describe <i><b>Boolean Logic</b> as a <b>theoretical description</b> of <b>circuits</b></i>.</br></br>
 			</div>
 			</div>
-			
+
 			</br>
-			
+
 			<img src="http://i.dailymail.co.uk/i/pix/2012/02/17/article-2102577-11C81BCC000005DC-776_468x324.jpg" class="img-fluid shadowLight center-block visible-xs" style="max-height:200px; max-width: 400px; margin-bottom: 20px; margin-top: 10px;"></img>
 			<img src="http://i.dailymail.co.uk/i/pix/2012/02/17/article-2102577-11C81BCC000005DC-776_468x324.jpg" class="shadowLight img-circle pull-left hidden-xs" style="height:300px; width: 300px; margin-bottom: 10px; margin-top: 20px"></img>
-			
-			<div class="shadowLight divider" style="font-size: 1.2em; line-height: 2em; padding: 5px">
+
+			<div class="shadowLight divider animate" style="font-size: 1.2em; line-height: 2em; padding: 5px">
 			<b>Computational Logic</b> encompasses <i>Boolean Logic</i>, but also includes other types of Logic such as <b>Separation Logic</b> and <b>Hoores Logic</b>, which describe computers at a higher level of abstraction (as in describing the programs on the computer rather than the bits that make it up).</p>
 			<p>Incidentally, one of the <b>core developments</b> in Computational Logic, which is now used throughout the world to verify imperative programs before release, Separation Logic, was developed by a Researcher at UCL's PPLV department - <b>Peter O'Hearn</b>.</p>
 			</div>
@@ -136,15 +167,15 @@ $(document).ready(function() {
 			<span class="glyphicon glyphicon-menu-down"></span>
 		</div>
 	</div>
-	
+
 	<!-- get started -->
 	<div class="row">
-		<div class="col-md-12 text-center shadowLight mainPage" style="z-index: 8; background-color: #FFFFFF;">
-			<h3>So, What is PPLV?</h3>
-			<p  style="font-size: 1.2em; line-height: 2em; padding: 5px">In conclusion, PPLV is a Research Area focused on extending Computational Logic, whether that be within the field itself, or into other disciplines</p>
+		<div class="col-md-12 text-center shadowLight mainPage animate" style="z-index: 8; background-color: #FFFFFF;">
+			<h3 class="animate">So, What is PPLV?</h3>
+			<p  style="font-size: 1.2em; line-height: 2em; padding: 5px" class="animate">In conclusion, PPLV is a Research Area focused on extending Computational Logic, whether that be within the field itself, or into other disciplines</p>
 			<p>With a basic summary complete, you're probably wondering - how was it developed?</p>
-			<p style="font-size: 1.5em;">Let's find out...</p>
-			<button class="btn btn-lg buttonBlue" data-target="verification.html">History of Area</button>
+			<p style="font-size: 1.5em;" class="animate">Let's find out...</p>
+			<button class="btn btn-lg buttonBlue" data-target="verification.html" class="animate">History of Area</button>
 		</div>
 	</div>
 	</div>
@@ -155,24 +186,24 @@ $(document).ready(function() {
 <div class="row">
 	<div class="col-md-6 col-xs-9" style="color: #ffffff;">
 		<h4>Site Navigation</h4>
-		
-		
+
+
 		<div class="col-md-3 col-xs-3" style="color: #ffffff; margin-left: 20px; padding-right: 0px;">
-			<p><a href="index.html" style="color: #ffffff;">Home</a></p>	
-			<p><a href="meta.html#aboutus" style="color: #ffffff;">About Us</a></p>
+			<p><a href="index.html" style="color: #ffffff;" class="transition">Home</a></p>
+			<p><a href="meta.html#aboutus" style="color: #ffffff;" class="transition">About Us</a></p>
 		</div>
-		
+
 		<div class="col-md-3 col-xs-3" style="color: #ffffff;">
-			<p><a href="research.html" style="color: #ffffff;">UCL Research Team</a></p>
-			<p><a href="meta.html#contact" style="color: #ffffff;">Contact Us</a></p>
+			<p><a href="research.html" style="color: #ffffff;" class="transition">UCL Research Team</a></p>
+			<p><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></p>
 		</div>
-		
-		<div class="col-md-3 col-xs-3" style="color: #ffffff;">
-			<p><a href="meta.html#citations" style="color: #ffffff;">References Page</a></p>
-		</div>	
-		
-		
-	
+
+		<div class="col-md-3 col-xs-3" style="color: #ffffff;" class="transition">
+			<p><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></p>
+		</div>
+
+
+
 	</div>
 
 		<div class="row">
