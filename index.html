@@ -58,62 +58,93 @@ $(document).ready(function() {
 				<li class="active"><a href="index.html">Home</a></li>
 		
 				
-				<li><a href="verification.html"> Verification</a></li>
+				<li><a href="index.html#about">About the Area</a></li>
 
-				<li><a href="pop.html">Principles of Programming</a></li>
+				<li><a href="history.html">History of Area</a></li>
 
-				<li><a href="logic.html">Logic</a></li>
+				<li><a href="research.html">UCL Research Team</a></li>
 				
-				<li><a href="timeline.html">Timeline</a></li>
+				<li><a href="research.html#impact">Impact</a></li>
 
-				<li><a href="about.html">About us</a></li>	
+				<li><a href="meta.html">About this site</a></li>	
 			</ul>
 		</div>
 	</div>
 </div>
 
 
-
-
 <!-- site content -->
 <div class="container" id="main">
 	<!-- hero image - what is PPLV + explanation -->
 	<div class="row" id="hero">
-		<div class="col-md-12 text-center shadowLight primaryBlue" style="z-index: 10;">
-			<h1> What is PPLV? </h1>
-			<p> PPLV is a Computer Science Research Area focused on investigating how rigorous mathematical models can be used in technical endeavors.<br>
-			PPLV stands for Principles of Programming, Logic and Verification, and despite what it's name might suggest, it is not only important in high end computing but actually integral to forming the technology we use everyday.</p>
-			<h4>Let's learn more together...</h4>
-			<span class="glyphicon glyphicon-menu-down visible-sm"></span>
+		<div class="col-md-12 text-center shadowLight primaryBlue" style="z-index: 10; text-align:center;">
+			<h1>Principles of Programming, Verification and Logic </h1>
+			<p>This website has been set up by UCL to explain the Computer Science PPLV Research Area.
+			</p>
+			<h4>Scroll down to find out more...</h4>
+			<span class="glyphicon glyphicon-menu-down hidden-xs" style=""></span>
 		</div>
 	</div>
 	<div id="content" style="margin-top: 0;">
 	<!-- what will this site tell you? -->
 	<div class="row">
-		<div class="col-md-12 shadowLight mainPage" style="z-index: 8; background-color: #FFFFFF;">
-			<h3> What does this site contain?</h3>
-			<p> This website is aimed at increasing awareness for this field - to us, it seems that such an integral field should lack any proper awareness.<br>
-			We hope to take you through an indepth tour of the area, from an intriguing exploration of PPLV's history, to highlighting any important contributors. We'd also like to indicate our very own University (UCL)'s contributions to this field, and finally wrap it up with an overview of PPLV's impact on the world.</br></br></p>
+		<div class="col-md-12 shadowLight mainPage" style="z-index: 8; background-color: #FFFFFF;" id="about">
+			<div>
+			<h3> What is PPLV?</h3>
+			<p style="font-size: 1.2em; line-height: 2em; padding: 5px">PPLV is a research area focused on Computational Logic and it's applications to other areas.</br>Research Projects in this area often either seek to develop new computational logic theories or to use them to create rigorous mathematical models that accurately describe and predict physical systems.</br></br></p>
+			<h4>Wait...What on earth does that mean?</h4>
+			</div>
 			<span class="glyphicon glyphicon-menu-down visible-sm"></span>
 		</div>
 	</div>
 	
 	<!-- why does this site exist? -->
 	<div class="row">
-		<div class="col-md-12 shadowLight contentGray mainPage" style="z-index: 6;">
-			<h3>So why does this site exist?</h3>
-			<p>This site was made as part of UCL's Integrated Engineering Project -  an attempt by the university to allow it's students to get a better understanding of the research that it does.<br></p>
-			<span class="glyphicon glyphicon-menu-down visible-sm"></span>
+		<div class="col-md-12 shadowLight contentGray mainPage" style="z-index: 6; font-family: 'Open Sans', sans-serif;">
+			<div class="divider shadowLight">
+			<h3>What is Computational Logic?</br></h3>
+			<p>As PPLV is a research area based around the core concept of Computational Logic, before moving forward, it's probably best to first <strong><big>explain what logic is...</big></strong><br></br></p>
+			</div>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs" style="height:300px; width: 300px; margin-bottom: 30px;"></img>
+			</br>
+			<div class="divider shadowLight">
+			<div>
+			<h4><b>A Brief Introduction to Logic</b></h4>
+			<p style="font-size:0.8em; font-family: 'Open Sans', sans-serif;"><i>Note: For the purpose of brevity, this overview is very rough - if you are interested, check the reference for links that can explain this topic in greater detail</i></p>
+			</div>
+			<div>
+			<p><b>Logic</b>, in the mathematical sense is the study of developing rules and operations to describe concepts.
+			In Computer Science, Logic is specifically used to <i>describe <b>Computational Algorithms</b></i>.</br></br>
+			</div>
+			<div style="font-size: 1.2em; line-height: 2em; padding: 5px">
+			An analogous example which may illustrate the concept more clearly is <b>Boolean Logic</b> and it's <i>relationship with circuits</i>.</br></br>
+			In Boolean Logic, values are either <b>True (1)</b> or <b>False (0)</b> and there exist operators (<b>AND</b>, <b>OR</b>, <b>XOR</b> etc.) which return <b>True</b> or <b>False</b>, depending on their input. As these exact operations and values are representable using circuits, we could describe <i><b>Boolean Logic</b> as a <b>theoretical description</b> of <b>circuits</b></i>.</br></br>
+			</div>
+			</div>
+			
+			</br>
+			
+			<img src="http://i.dailymail.co.uk/i/pix/2012/02/17/article-2102577-11C81BCC000005DC-776_468x324.jpg" class="img-fluid shadowLight center-block visible-xs" style="max-height:200px; max-width: 400px; margin-bottom: 20px; margin-top: 10px;"></img>
+			<img src="http://i.dailymail.co.uk/i/pix/2012/02/17/article-2102577-11C81BCC000005DC-776_468x324.jpg" class="shadowLight img-circle pull-left hidden-xs" style="height:300px; width: 300px; margin-bottom: 10px; margin-top: 20px"></img>
+			
+			<div class="shadowLight divider" style="font-size: 1.2em; line-height: 2em; padding: 5px">
+			<b>Computational Logic</b> encompasses <i>Boolean Logic</i>, but also includes other types of Logic such as <b>Separation Logic</b> and <b>Hoores Logic</b>, which describe computers at a higher level of abstraction (as in describing the programs on the computer rather than the bits that make it up).</p>
+			<p>Incidentally, one of the <b>core developments</b> in Computational Logic, which is now used throughout the world to verify imperative programs before release, Separation Logic, was developed by a Researcher at UCL's PPLV department - <b>Peter O'Hearn</b>.</p>
+			</div>
+			</br>
+			<span class="glyphicon glyphicon-menu-down"></span>
 		</div>
 	</div>
 	
 	<!-- get started -->
 	<div class="row">
 		<div class="col-md-12 text-center shadowLight mainPage" style="z-index: 8; background-color: #FFFFFF;">
-			<h3>Get Started</h3>
-			<p>It looks like you've reached the end of the page - try some of the links on the nav bar or...</p>
-			
-			<button class="btn btn-lg buttonBlue" data-target="verification.html">What is it about?</button>
+			<h3>So, What is PPLV?</h3>
+			<p  style="font-size: 1.2em; line-height: 2em; padding: 5px">In conclusion, PPLV is a Research Area focused on extending Computational Logic, whether that be within the field itself, or into other disciplines</p>
+			<p>With a basic summary complete, you're probably wondering - how was it developed?</p>
+			<p style="font-size: 1.5em;">Let's find out...</p>
+			<button class="btn btn-lg buttonBlue" data-target="verification.html">History of Area</button>
 		</div>
 	</div>
 	</div>
@@ -122,20 +153,36 @@ $(document).ready(function() {
 
 <div class="footer shadowLight navBlue" style="z-index: 12; margin-left: -50;">
 <div class="row">
-	<div class="col-md-3 col-xs-3">
-		<p>Team L's Technical Submission</p>
-		<p>Team Members:</p>
-		<p>Affiq, Fazaan, Kiran, Louis, Zharfan</p>
+	<div class="col-md-6 col-xs-9" style="color: #ffffff;">
+		<h4>Site Navigation</h4>
+		
+		
+		<div class="col-md-3 col-xs-3" style="color: #ffffff; margin-left: 20px; padding-right: 0px;">
+			<p><a href="index.html" style="color: #ffffff;">Home</a></p>	
+			<p><a href="meta.html#aboutus" style="color: #ffffff;">About Us</a></p>
+		</div>
+		
+		<div class="col-md-3 col-xs-3" style="color: #ffffff;">
+			<p><a href="research.html" style="color: #ffffff;">UCL Research Team</a></p>
+			<p><a href="meta.html#contact" style="color: #ffffff;">Contact Us</a></p>
+		</div>
+		
+		<div class="col-md-3 col-xs-3" style="color: #ffffff;">
+			<p><a href="meta.html#citations" style="color: #ffffff;">References Page</a></p>
+		</div>	
+		
+		
+	
 	</div>
-	<div class="col-md-3 col-xs-3">
-		<p>Links:</p>
-		<p>Home</p>
-		<p>References</p>
-	</div>
-	<div class="col-xs-3 pull-right">
-		<p> Made as part of UCL's IEP</p>
-		<p> Copyright Reserved?</p>
-	</div>
+
+		<div class="row">
+			<div class="col-xs-3 pull-right">
+			<h3>Made as part of UCL's IEP</h3>
+			<p>Creative Commons License</p>
+			</div>
+
+		</div>
+
 </div>
 </div>
 
