@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html style="background-color: #BBDEFB">
 <head>
 <title>Alternate Design for the Website</title>
 
@@ -20,6 +20,18 @@
 
 <!-- custom theme -->
 <link rel="stylesheet" type="text/css" href="style.css">
+
+
+<!--Smooth Transition JS -->
+<script>
+	$(document).ready(function() {
+
+	});
+</script>
+
+
+
+
 </head>
 
 <body>
@@ -32,26 +44,26 @@
 				<span class="sr-only">Toggle navigation</span>
 				<span> Menu </span>
 			</button>
-			<a class="navbar-brand navBlue" href="index.html">PPLV</a>
+			<a class="navbar-brand navBlue" href="index.html" class="transition">PPLV</a>
 		</div>
-			
+
 		<div class="collapse navbar-collapse" id="navcollapse">
 			<ul class="nav navbar-nav navbar-center">
 				<li class="dropdown"></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right navBlue" style="text-align: center;">
-				<li class="active"><a href="index.html">Home</a></li>
-		
-				
-				<li><a href="index.html#about">About the Area</a></li>
+				<li class="active"><a href="index.html" class="transition">Home</a></li>
 
-				<li><a href="history.html">History of Area</a></li>
 
-				<li><a href="research.html">UCL Research Team</a></li>
-				
-				<li><a href="research.html#impact">Impact</a></li>
+				<li><a href="index.html#about" class="transition">About the Area</a></li>
 
-				<li><a href="meta.html">About this site</a></li>	
+				<li><a href="history.html" class="transition">History of Area</a></li>
+
+				<li><a href="research.html" class="transition">UCL Research Team</a></li>
+
+				<li><a href="research.html#impact" class="transition">Impact</a></li>
+
+				<li><a href="meta.html" class="transition">About this site</a></li>
 			</ul>
 		</div>
 	</div>
@@ -72,10 +84,10 @@
 			<h3>This page is about the site itself (+ it's authors), and citations for the information.</h3>
 			<span class="glyphicon glyphicon-menu-down visible-sm"></span>
 		</div>
-		
+
 	</div>
 	</div>
-	
+
 	<!-- what will this site tell you? -->
 	<div class="row" id="projects">
 		<div class="col-md-12 text-center " style="z-index: 8; background-color: #FFFFFF;">
@@ -93,9 +105,9 @@
 			<p>Good, good, good, good, good, good, good, good good, good, good, good, good, good, good, good, good, good.
 			</p>
 		</div>
-		
-		
-		
+
+
+
 		<div class="col-md-3 text-center" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
 		<img src="http://www0.cs.ucl.ac.uk/people/photos/D.Pym.jpg" class="img-fluid shadowLight center-block img-circle" style="height:200px; width: 200px; margin-bottom: 20px; margin-top: 10px;"></img>
 			<h2>Researcher</h2>
@@ -104,10 +116,10 @@
 			<p>Good, good, good, good, good, good, good, good good, good, good, good, good, good, good, good, good, good.
 			</p>
 		</div>
-		
-		
-		
-		
+
+
+
+
 		<div class="col-md-3 text-center" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
 		<img src="http://www0.cs.ucl.ac.uk/people/photos/D.Pym.jpg" class="img-fluid shadowLight center-block img-circle" style="height:200px; width: 200px; margin-bottom: 20px; margin-top: 10px;"></img>
 			<h2>Researcher</h2>
@@ -116,10 +128,10 @@
 			<p>Good, good, good, good, good, good, good, good good, good, good, good, good, good, good, good, good, good.
 			</p>
 		</div>
-		
-		
-		
-		
+
+
+
+
 		<div class="col-md-3 text-center" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
 		<img src="http://www0.cs.ucl.ac.uk/people/photos/D.Pym.jpg" class="img-fluid shadowLight center-block img-circle" style="height:200px; width: 200px; margin-bottom: 20px; margin-top: 10px;"></img>
 			<h2>Creative Director</h2>
@@ -127,62 +139,62 @@
 			<p>Good, good, good, good, good, good, good, good good, good, good, good, good, good, good, good, good, good.
 			</p>
 		</div>
-		
-		
-		
+
+
+
 		<div class="col-md-3 text-center" style="z-index: 2; padding: 5px; margin-bottom: 20px;">
 		<img src="http://www0.cs.ucl.ac.uk/people/photos/D.Pym.jpg" class="img-fluid shadowLight center-block img-circle" style="height:200px; width: 200px; margin-bottom: 20px; margin-top: 10px;"></img>
 			<h2>Coder</h2>
 			<h3>Kiran </h3>
 			<p>Good, good, good, good, good, good, good, good good, good, good, good, good, good, good, good, good, good.
 			</p>
-		</div>		
-		
-		
-		
-		
+		</div>
+
+
+
+
 	</div>
 
-		
 
-	
-	
-	
+
+
+
+
 	<div class="row shadowLight" id="citations">
 		<div class="col-md-12 text-center" style="z-index: 4; background-color: #FFFFFF;">
 			<h2>References</h2>
 			<p>This site combines information from various sources to provide a hollistic explanation of Computer Science. We've added a comprehensive list of these sources below (organised by which page they're on):</p>
 		</div>
-		
+
 		<div class="col-md-12 contentGray" style="z-index: 4;" id="cite-about">
 			<h3>"About PPLV" Section</h3>
 			<p>This site combines information from various sources to provide a hollistic explanation of Computer Science. We've added a comprehensive list of these sources below:</p>
 		</div>
-		
+
 		<div class="col-md-12" style="z-index: 4; background-color: #FFFFFF;" id="cite-history">
 			<h3>"History of PPLV" Section</h3>
 			<p>This site combines information from various sources to provide a hollistic explanation of Computer Science. We've added a comprehensive list of these sources below:</p>
 		</div>
-		
+
 		<div class="col-md-12 contentGray" style="z-index: 4;" id="cite-research">
 			<h3>"UCL PPLV Research" Section</h3>
 			<p>This site combines information from various sources to provide a hollistic explanation of Computer Science. We've added a comprehensive list of these sources below:</p>
 		</div>
-		
-		
-		
-	</div>	
-	
+
+
+
+	</div>
+
 	<div class="row" id="contact">
 		<div class="col-md-12 text-center shadowLight" style="z-index: 4; background-color: #FFFFFF;">
 			<h3>Contact Us</h3>
 			<p>You can contact the team at:
 			</br>
 			thebestteam@ucl.ac.uk</p>
-			
+
 		</div>
-	</div>	
-	
+	</div>
+
 	<div class="row">
 		<div class="col-md-12 text-center shadowLight" style="z-index: 4; background-color: #FFFFFF;">
 			<h3>That's all folks!</h3>
@@ -190,7 +202,7 @@
 			</br>
 			Hopefully, we've managed to give you an understanding of what PPLV is, and why it's important.</br>
 			Below are a few links that are good sources to find out more about this subject:</p>
-			
+
 			<button class="btn btn-lg buttonBlue shadowHeavy">Move on to Logic</button>
 		</div>
 	</div>
@@ -200,24 +212,24 @@
 <div class="row">
 	<div class="col-md-6 col-xs-9" style="color: #ffffff;">
 		<h4>Site Navigation</h4>
-		
-		
+
+
 		<div class="col-md-3 col-xs-3" style="color: #ffffff; margin-left: 20px; padding-right: 0px;">
-			<p><a href="index.html" style="color: #ffffff;">Home</a></p>	
-			<p><a href="meta.html#aboutus" style="color: #ffffff;">About Us</a></p>
+			<p><a href="index.html" style="color: #ffffff;" class="transition">Home</a></p>
+			<p><a href="meta.html#aboutus" style="color: #ffffff;" class="transition">About Us</a></p>
 		</div>
-		
+
 		<div class="col-md-3 col-xs-3" style="color: #ffffff;">
-			<p><a href="research.html" style="color: #ffffff;">UCL Research Team</a></p>
-			<p><a href="meta.html#contact" style="color: #ffffff;">Contact Us</a></p>
+			<p><a href="research.html" style="color: #ffffff;" class="transition">UCL Research Team</a></p>
+			<p><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></p>
 		</div>
-		
+
 		<div class="col-md-3 col-xs-3" style="color: #ffffff;">
-			<p><a href="meta.html#citations" style="color: #ffffff;">References Page</a></p>
-		</div>	
-		
-		
-	
+			<p><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></p>
+		</div>
+
+
+
 	</div>
 
 		<div class="row">
