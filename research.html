@@ -36,6 +36,16 @@
 <!--Smooth Transition JS -->
 <script>
 	$(document).ready(function() {
+    effect = $(".animate").fadeTo(0, 0);
+
+  $(window).scroll(function(d,h) {
+      effect.each(function(i) {
+          a = $(this).offset().top + $(this).height()/2;
+          b = $(window).scrollTop() + $(window).height();
+          if (a < b) $(this).fadeTo(500,1);
+      });
+  });
+
 
 	});
 </script>
@@ -120,9 +130,9 @@
 	<div class="row shadowLight" id="projects">
 		<div class="col-md-12 impact" style="z-index: 6; background-color: #d1ecff; padding-bottom: 5px;">
 		<div class="divider shadowLight">
-			<h3>Research Projects and Impacts</h3></div>
+			<h3 class="animate">Research Projects and Impacts</h3></div>
 			<div class="separator shadowLight">
-			<p>
+			<p class="animate">
 			Once again, for the sake of brevity we haven't been able to cover all the research projects undertaken by the PPLV department, so we've chosen to display a few that we found the most interesting.</p>
 		</div>
 		</div>
@@ -133,8 +143,8 @@
 				<iframe class="embed-responsive-item shadowLight"  src="http://www.youtube.com/embed/mu7JYa7qwaQ"></iframe>
 			</div>
 			<div class="separator shadowLight">
-			<h3>Resource Management</h3>
-			<p>
+			<h3 class="animate">Resource Management</h3>
+			<p class="animate">
 			In the modern day, its....</p>
 			</div>
 		</div>
@@ -145,8 +155,8 @@
 				<iframe class="embed-responsive-item"  src="http://www.youtube.com/embed/c19hpsvr8Qg"></iframe>
 			</div>
 			<div class="separator shadowLight">
-			<h3>Productive Security</h3>
-			<p>
+			<h3 class="animate">Productive Security</h3>
+			<p class="animate">
 			In the modern day, its....</p>
 			</div>
 		</div>
@@ -155,8 +165,8 @@
 				<iframe class="embed-responsive-item"  src="http://www.youtube.com/embed/k0of2Xrg0jM"></iframe>
 			</div>
 			<div class="separator shadowLight">
-			<h3>Concurrent Program verification</h3>
-			<p>
+			<h3 class="animate">Concurrent Program verification</h3>
+			<p class="animate">
 			In the modern day, its....</p>
 			</div>
 
@@ -166,8 +176,8 @@
 				<iframe class="embed-responsive-item"  src="http://www.youtube.com/embed/aElfL4nXzkQ"></iframe>
 			</div>
 			<div class="separator shadowLight">
-			<h3>Algebra and Logic for Info-Security</h3>
-			<p>
+			<h3 class="animate">Algebra and Logic for Info-Security</h3>
+			<p class="animate">
 			In the modern day, its....</p>
 			</div>
 		</div>
@@ -176,8 +186,8 @@
 	<!-- get started -->
 	<div class="row">
 		<div class="col-md-12 text-center shadowLight" style="z-index: 4; background-color: #FFFFFF;">
-			<h3>PPLV</h3>
-			<p>As you can see, PPLV is an area under constant research - any and every development in this field has significant impacts on the field of Computer Science.</p>
+			<h3 class="animate">PPLV</h3>
+			<p class="animate">As you can see, PPLV is an area under constant research - any and every development in this field has significant impacts on the field of Computer Science.</p>
 
 			<button class="btn btn-lg buttonBlue shadowHeavy">Move on to Logic</button>
 		</div>
@@ -186,7 +196,7 @@
 
 <div class="footer shadowLight navBlue" style="z-index: 12; margin-left: -50;">
 <div class="row">
-	<div class="col-md-6 col-xs-9" style="color: #ffffff;">
+	<div class="col-md-6 col-xs-9 hidden-xs" style="color: #ffffff;">
 		<h4>Site Navigation</h4>
 
 
@@ -200,21 +210,54 @@
 			<p><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></p>
 		</div>
 
-		<div class="col-md-3 col-xs-3" style="color: #ffffff;">
+		<div class="col-md-3 col-xs-3" style="color: #ffffff;" class="transition">
 			<p><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></p>
 		</div>
+	</div>
+
+
+
+	<div class="visible-xs col-xs-12 col-sm-12" style="color: #ffffff;">
+		<h4 style="text-align: center;">Site Navigation</h4>
+		<ul style="list-style: none; text-align:center; margin-left:-30px;">
+
+
+
+
+			<li><a href="index.html" style="color: #ffffff;" class="transition">Home</a></li>
+			<li><a href="meta.html#aboutus" style="color: #ffffff;" class="transition">About Us</a></li>
+
+
+			<li><a href="research.html" style="color: #ffffff;" class="transition">UCL Research Team</a></li>
+			<li><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></li>
+
+
+
+			<li><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></li>
+
+
+	</ul>
 
 
 
 	</div>
 
+	<div class="col-xs-12 visible-xs center-block" style="text-align: center; padding: 0vw 30vw;">
+	<h3>Made as part of UCL's IEP</h3>
+	<p>Creative Commons License</p>
+	</div>
+
+
+
 		<div class="row">
-			<div class="col-xs-3 pull-right">
+			<div class="col-xs-3 hidden-xs pull-right">
 			<h3>Made as part of UCL's IEP</h3>
 			<p>Creative Commons License</p>
 			</div>
 
 		</div>
+
+
 
 </div>
 </div>
