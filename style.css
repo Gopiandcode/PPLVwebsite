@@ -1,5 +1,5 @@
 /* styles to help debug - borders around elements */
-
+/*
 .row > div {
 	border: 1px solid black;
 }
@@ -11,16 +11,37 @@
 }
 
 .footer {
-	border: 1px solid black;
-	margin-left: 1vw;
+	border: 1px solid black;	
+}
+
+*/
+
+.footer {
+	margin-left: 0vw;
 	padding-left: 10px;
 	padding-right: 10px;
+	padding-top: 20px;
 	width: 100.85vw;
+	z-index: 12;
+	position: relative;
 }
 
 body {
 	overflow-x: hidden;
+	background-color: #f2f2f2;
+	position:relative;
 }
+
+div#hero {
+	padding: 200;
+	text-align: center;
+}
+
+#hero > div {
+	height: 100%;
+	
+}
+
 
 
 #main > .row > div > span {
@@ -45,6 +66,10 @@ body {
 	margin-top: 50px;
 }
 
+#content {
+	margin-top: 50px;
+}
+
 
 /*screen specific options:*/
 
@@ -55,14 +80,40 @@ body {
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
+
+#content >.row > div {
+	padding-left: 10vw;
+	padding-right: 10vw;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+div.mainPage {
+		text-align: center;
+		height: 200;
+		margin: 0;
+		padding-top: 50vw;
+		padding-bottom: 50vw;
+}
 	/*small sized screens */
 @media only screen and (min-width : 768px) {
 	#main >.row > div {
 		padding-left: 20vw;
 		padding-right: 20vw;
-		padding-top: 180px;
-		padding-bottom: 180px;
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}	
+	
+	#content >.row > div {
+		padding-left: 20vw;
+		padding-right: 20vw;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}	
+	
+	.mainPage {
+		padding-top: 60vw;
+		padding-bottom: 60vw;
+	}
 
 }
 	/*Medium sized screens*/
@@ -70,12 +121,105 @@ body {
 	#main >.row > div {
 		padding-left: 15vw;
 		padding-right: 15vw;
-		padding-top: 340px;
-		padding-bottom: 340px;
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 	
 	#main > .row > div > button {
 		margin-top: 50px;
 	}
 
+	#content >.row > div {
+		padding-left: 15vw;
+		padding-right: 15vw;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	
+	#content > .row > div > button {
+		margin-top: 50px;
+	}
+	
+	.mainPage {
+		padding-top: 60vw;
+		padding-bottom: 60vw;
+	}
 }
+
+
+/* Shadow Settings - works provided z-indexes are specified */
+
+#navi {
+	-webkit-box-shadow: 0px 6px 13px 0px rgba(0,0,0,0.22);
+	-moz-box-shadow: 0px 6px 13px 0px rgba(0,0,0,0.22);
+	box-shadow: 0px 6px 13px 0px rgba(0,0,0,0.22);
+}
+
+.shadowLight {
+	-webkit-box-shadow: 0px 2px 13px 3px rgba(0,0,0,0.26);
+	-moz-box-shadow: 0px 2px 13px 3px rgba(0,0,0,0.26);
+	box-shadow: 0px 2px 13px 3px rgba(0,0,0,0.26);	
+}
+
+.shadowHeavy {
+	-webkit-box-shadow: 0px 3px 16px 2px rgba(0,0,0,0.33);
+	-moz-box-shadow: 0px 3px 16px 2px rgba(0,0,0,0.33);
+	box-shadow: 0px 3px 16px 2px rgba(0,0,0,0.33);
+}
+
+
+
+
+
+/* Theme Colors Material Blue */
+
+.primaryBlue {
+	background-color: #2196F3;
+}
+
+.primaryBlue > h1 {
+	color: #FFFFFF;
+}
+
+.primaryBlue > h2 {
+	color: #FFFFFF;
+}
+
+.primaryBlue > h3 {
+	color: #FFFFFF;
+}
+
+.primaryBlue > p {
+	color: #BBDEFB;
+}
+
+.buttonBlue {
+	background-color: #03A9F4;
+}
+
+.primaryText {
+	color:#212121;
+}
+
+.secondaryText {
+	color: #757575;
+}
+
+.navBlue {
+	background-color: #1976D2;
+	color: #FFFFFF;
+}
+
+.navBlue > li > a{
+	color: #FFFFFF;
+}
+
+.navBlue > li > a:hover {
+	color:#212121;
+}
+
+.contentGray {
+	background-color: #BDBDBD;
+	color: #212121;
+}
+
