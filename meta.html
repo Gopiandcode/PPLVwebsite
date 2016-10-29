@@ -25,6 +25,16 @@
 <!--Smooth Transition JS -->
 <script>
 	$(document).ready(function() {
+		effect = $(".animate").fadeTo(0, 0);
+
+	$(window).scroll(function(d,h) {
+	    effect.each(function(i) {
+	        a = $(this).offset().top + $(this).height()/2;
+	        b = $(window).scrollTop() + $(window).height();
+	        if (a < b) $(this).fadeTo(500,1);
+	    });
+	});
+
 
 	});
 </script>
@@ -97,7 +107,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="col-md-3 text-center" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
+		<div class="col-md-3 text-center animate" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
 		<img src="http://www0.cs.ucl.ac.uk/people/photos/D.Pym.jpg" class="img-fluid shadowLight center-block img-circle" style="height:200px; width: 200px; margin-bottom: 20px; margin-top: 10px;"></img>
 			<h2>Researcher</h2>
 			<h3><small>Principles of Programming Specialist</small></h3>
@@ -108,7 +118,7 @@
 
 
 
-		<div class="col-md-3 text-center" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
+		<div class="col-md-3 text-center animate" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
 		<img src="http://www0.cs.ucl.ac.uk/people/photos/D.Pym.jpg" class="img-fluid shadowLight center-block img-circle" style="height:200px; width: 200px; margin-bottom: 20px; margin-top: 10px;"></img>
 			<h2>Researcher</h2>
 			<h3><small>Computer Logic Specialist</small></h3>
@@ -120,7 +130,7 @@
 
 
 
-		<div class="col-md-3 text-center" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
+		<div class="col-md-3 text-center animate" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
 		<img src="http://www0.cs.ucl.ac.uk/people/photos/D.Pym.jpg" class="img-fluid shadowLight center-block img-circle" style="height:200px; width: 200px; margin-bottom: 20px; margin-top: 10px;"></img>
 			<h2>Researcher</h2>
 			<h3><small>Verification Specialist</small></h3>
@@ -132,7 +142,7 @@
 
 
 
-		<div class="col-md-3 text-center" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
+		<div class="col-md-3 text-center animate" style="z-index: 8; background-color: #FFFFFF; padding: 5px; margin-bottom: 20px;">
 		<img src="http://www0.cs.ucl.ac.uk/people/photos/D.Pym.jpg" class="img-fluid shadowLight center-block img-circle" style="height:200px; width: 200px; margin-bottom: 20px; margin-top: 10px;"></img>
 			<h2>Creative Director</h2>
 			<h3>Zharfan </h3>
@@ -142,7 +152,7 @@
 
 
 
-		<div class="col-md-3 text-center" style="z-index: 2; padding: 5px; margin-bottom: 20px;">
+		<div class="col-md-3 text-center animate" style="z-index: 2; padding: 5px; margin-bottom: 20px;">
 		<img src="http://www0.cs.ucl.ac.uk/people/photos/D.Pym.jpg" class="img-fluid shadowLight center-block img-circle" style="height:200px; width: 200px; margin-bottom: 20px; margin-top: 10px;"></img>
 			<h2>Coder</h2>
 			<h3>Kiran </h3>
@@ -161,22 +171,22 @@
 
 
 	<div class="row shadowLight" id="citations">
-		<div class="col-md-12 text-center" style="z-index: 4; background-color: #FFFFFF;">
+		<div class="col-md-12 text-center animate" style="z-index: 4; background-color: #FFFFFF;">
 			<h2>References</h2>
 			<p>This site combines information from various sources to provide a hollistic explanation of Computer Science. We've added a comprehensive list of these sources below (organised by which page they're on):</p>
 		</div>
 
-		<div class="col-md-12 contentGray" style="z-index: 4;" id="cite-about">
+		<div class="col-md-12 contentGray animate" style="z-index: 4;" id="cite-about">
 			<h3>"About PPLV" Section</h3>
 			<p>This site combines information from various sources to provide a hollistic explanation of Computer Science. We've added a comprehensive list of these sources below:</p>
 		</div>
 
-		<div class="col-md-12" style="z-index: 4; background-color: #FFFFFF;" id="cite-history">
+		<div class="col-md-12 animate" style="z-index: 4; background-color: #FFFFFF;" id="cite-history">
 			<h3>"History of PPLV" Section</h3>
 			<p>This site combines information from various sources to provide a hollistic explanation of Computer Science. We've added a comprehensive list of these sources below:</p>
 		</div>
 
-		<div class="col-md-12 contentGray" style="z-index: 4;" id="cite-research">
+		<div class="col-md-12 contentGray animate" style="z-index: 4;" id="cite-research">
 			<h3>"UCL PPLV Research" Section</h3>
 			<p>This site combines information from various sources to provide a hollistic explanation of Computer Science. We've added a comprehensive list of these sources below:</p>
 		</div>
@@ -185,7 +195,7 @@
 
 	</div>
 
-	<div class="row" id="contact">
+	<div class="row animate" id="contact">
 		<div class="col-md-12 text-center shadowLight" style="z-index: 4; background-color: #FFFFFF;">
 			<h3>Contact Us</h3>
 			<p>You can contact the team at:
@@ -195,7 +205,7 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row animate">
 		<div class="col-md-12 text-center shadowLight" style="z-index: 4; background-color: #FFFFFF;">
 			<h3>That's all folks!</h3>
 			<p>We hope you've enjoyed your stay on our website. This has been our first attempt at web development, and we found the process to be througly enjoyable.
@@ -210,7 +220,7 @@
 
 <div class="footer shadowLight navBlue" style="z-index: 12; margin-left: -50;">
 <div class="row">
-	<div class="col-md-6 col-xs-9" style="color: #ffffff;">
+	<div class="col-md-6 col-xs-9 hidden-xs" style="color: #ffffff;">
 		<h4>Site Navigation</h4>
 
 
@@ -224,21 +234,54 @@
 			<p><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></p>
 		</div>
 
-		<div class="col-md-3 col-xs-3" style="color: #ffffff;">
+		<div class="col-md-3 col-xs-3" style="color: #ffffff;" class="transition">
 			<p><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></p>
 		</div>
+	</div>
+
+
+
+	<div class="visible-xs col-xs-12 col-sm-12" style="color: #ffffff;">
+		<h4 style="text-align: center;">Site Navigation</h4>
+		<ul style="list-style: none; text-align:center; margin-left:-30px;">
+
+
+
+
+			<li><a href="index.html" style="color: #ffffff;" class="transition">Home</a></li>
+			<li><a href="meta.html#aboutus" style="color: #ffffff;" class="transition">About Us</a></li>
+
+
+			<li><a href="research.html" style="color: #ffffff;" class="transition">UCL Research Team</a></li>
+			<li><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></li>
+
+
+
+			<li><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></li>
+
+
+	</ul>
 
 
 
 	</div>
 
+	<div class="col-xs-12 visible-xs center-block" style="text-align: center; padding: 0vw 30vw;">
+	<h3>Made as part of UCL's IEP</h3>
+	<p>Creative Commons License</p>
+	</div>
+
+
+
 		<div class="row">
-			<div class="col-xs-3 pull-right">
+			<div class="col-xs-3 hidden-xs pull-right">
 			<h3>Made as part of UCL's IEP</h3>
 			<p>Creative Commons License</p>
 			</div>
 
 		</div>
+
+
 
 </div>
 </div>

@@ -23,7 +23,6 @@
 <!-- required files for animations-->
 <link rel="stylesheet" href="./dist/animate.css">
 
-<script src="./dist/scrolla.jquery.min.js"></script>
 
 
 <!-- A bit of Js which allows the hero image to fill the loaded screen -->
@@ -45,13 +44,12 @@ $(document).ready(function() {
 	setHeight();
 	$("body").css("display", "none");
 	$("body").fadeIn(250);
-	$('.animate').scrolla();
 
 	effect = $(".animate").fadeTo(0, 0);
 
 $(window).scroll(function(d,h) {
     effect.each(function(i) {
-        a = $(this).offset().top + $(this).height();
+        a = $(this).offset().top + $(this).height()/2;
         b = $(window).scrollTop() + $(window).height();
         if (a < b) $(this).fadeTo(500,1);
     });
@@ -78,7 +76,7 @@ $(window).scroll(function(d,h) {
 				<span class="sr-only">Toggle navigation</span>
 				<span> Menu </span>
 			</button>
-			<a class="navbar-brand navBlue transition" href="index.html">PPLV</a>
+			 <a class="navbar-brand navBlue transition" href="index.html">PPLV</a>
 		</div>
 
 		<div class="collapse navbar-collapse" id="navcollapse">
@@ -156,12 +154,12 @@ $(window).scroll(function(d,h) {
 
 			</br>
 
-			<img src="http://i.dailymail.co.uk/i/pix/2012/02/17/article-2102577-11C81BCC000005DC-776_468x324.jpg" class="img-fluid shadowLight center-block visible-xs" style="max-height:200px; max-width: 400px; margin-bottom: 20px; margin-top: 10px;"></img>
-			<img src="http://i.dailymail.co.uk/i/pix/2012/02/17/article-2102577-11C81BCC000005DC-776_468x324.jpg" class="shadowLight img-circle pull-left hidden-xs" style="height:300px; width: 300px; margin-bottom: 10px; margin-top: 20px"></img>
+			<img src="http://i.dailymail.co.uk/i/pix/2012/02/17/article-2102577-11C81BCC000005DC-776_468x324.jpg" class="img-fluid shadowLight center-block visible-xs animate" style="max-height:200px; max-width: 400px; margin-bottom: 20px; margin-top: 10px;"></img>
+			<img src="http://i.dailymail.co.uk/i/pix/2012/02/17/article-2102577-11C81BCC000005DC-776_468x324.jpg" class="shadowLight img-circle pull-left hidden-xs animate" style="height:300px; width: 300px; margin-bottom: 10px; margin-top: 20px"></img>
 
-			<div class="shadowLight divider animate" style="font-size: 1.2em; line-height: 2em; padding: 5px">
-			<b>Computational Logic</b> encompasses <i>Boolean Logic</i>, but also includes other types of Logic such as <b>Separation Logic</b> and <b>Hoores Logic</b>, which describe computers at a higher level of abstraction (as in describing the programs on the computer rather than the bits that make it up).</p>
-			<p>Incidentally, one of the <b>core developments</b> in Computational Logic, which is now used throughout the world to verify imperative programs before release, Separation Logic, was developed by a Researcher at UCL's PPLV department - <b>Peter O'Hearn</b>.</p>
+			<div class="shadowLight divider" style="font-size: 1.2em; line-height: 2em; padding: 5px">
+			<p class="animate"><b>Computational Logic</b> encompasses <i>Boolean Logic</i>, but also includes other types of Logic such as <b>Separation Logic</b> and <b>Hoores Logic</b>, which describe computers at a higher level of abstraction (as in describing the programs on the computer rather than the bits that make it up).</p>
+			<p class="animate">Incidentally, one of the <b>core developments</b> in Computational Logic, which is now used throughout the world to verify imperative programs before release, Separation Logic, was developed by a Researcher at UCL's PPLV department - <b>Peter O'Hearn</b>.</p>
 			</div>
 			</br>
 			<span class="glyphicon glyphicon-menu-down"></span>
@@ -184,7 +182,7 @@ $(window).scroll(function(d,h) {
 
 <div class="footer shadowLight navBlue" style="z-index: 12; margin-left: -50;">
 <div class="row">
-	<div class="col-md-6 col-xs-9" style="color: #ffffff;">
+	<div class="col-md-6 col-xs-9 hidden-xs" style="color: #ffffff;">
 		<h4>Site Navigation</h4>
 
 
@@ -201,18 +199,51 @@ $(window).scroll(function(d,h) {
 		<div class="col-md-3 col-xs-3" style="color: #ffffff;" class="transition">
 			<p><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></p>
 		</div>
+	</div>
+
+
+
+	<div class="visible-xs col-xs-12 col-sm-12" style="color: #ffffff;">
+		<h4 style="text-align: center;">Site Navigation</h4>
+		<ul style="list-style: none; text-align:center; margin-left:-30px;">
+
+
+
+
+			<li><a href="index.html" style="color: #ffffff;" class="transition">Home</a></li>
+			<li><a href="meta.html#aboutus" style="color: #ffffff;" class="transition">About Us</a></li>
+
+
+			<li><a href="research.html" style="color: #ffffff;" class="transition">UCL Research Team</a></li>
+			<li><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></li>
+
+
+
+			<li><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></li>
+
+
+	</ul>
 
 
 
 	</div>
 
+	<div class="col-xs-12 visible-xs center-block" style="text-align: center; padding: 0vw 30vw;">
+	<h3>Made as part of UCL's IEP</h3>
+	<p>Creative Commons License</p>
+	</div>
+
+
+
 		<div class="row">
-			<div class="col-xs-3 pull-right">
+			<div class="col-xs-3 hidden-xs pull-right">
 			<h3>Made as part of UCL's IEP</h3>
 			<p>Creative Commons License</p>
 			</div>
 
 		</div>
+
+
 
 </div>
 </div>

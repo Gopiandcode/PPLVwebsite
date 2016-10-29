@@ -25,9 +25,47 @@
 <!--Smooth Transition JS -->
 <script>
 	$(document).ready(function() {
+		effect = $(".animate").fadeTo(0, 0);
+
+	$(window).scroll(function(d,h) {
+	    effect.each(function(i) {
+	        a = $(this).offset().top + $(this).height()/2;
+	        b = $(window).scrollTop() + $(window).height();
+	        if (a < b) $(this).fadeTo(500,1);
+	    });
+	});
+
 
 	});
 </script>
+
+
+<!-- Specific style just for this page -->
+
+
+<style>
+	@media only screen and (min-width: 992px), only screen and (min-width: 768) {
+			.divider {
+				z-index: 8;
+				margin-right: 230px;
+				margin-bottom: 0px;
+
+
+			}
+
+			.separator {
+				z-index: 9;
+				margin-right: 230px;
+				margin-left: -30px;
+
+
+			}
+}
+
+
+
+</style>
+
 
 
 
@@ -109,10 +147,10 @@
 
 	<!--bluepanel-->
 	<div class="row">
-		<div class="col-md-12 shadowLight" style="z-index: 6; background-color: #d1ecff">
+		<div class="col-md-12 shadowLight animate" style="z-index: 6; background-color: #d1ecff">
 
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs" style="height:200px; width:200px; margin-bottom: 30px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs animate" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs animate" style="height:200px; width:200px; margin-bottom: 30px;"></img>
 
 
 		<div class="divider shadowLight">
@@ -129,10 +167,10 @@
 
 	<!--whitepanel-->
 	<div class="row">
-		<div class="col-md-12 shadowLight" style="z-index: 8; background-color: #FFFFFF;">
+		<div class="col-md-12 shadowLight animate" style="z-index: 8; background-color: #FFFFFF;">
 
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs" style="height:200px; width: 200px; margin-bottom: 30px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs animate" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs animate" style="height:200px; width: 200px; margin-bottom: 30px;"></img>
 
 
 			<h3>Birth of Computational Logic</h3>
@@ -147,10 +185,10 @@
 
 	<!--bluepanel-->
 	<div class="row">
-		<div class="col-md-12 shadowLight" style="z-index: 6; background-color: #d1ecff">
+		<div class="col-md-12 shadowLight animate" style="z-index: 6; background-color: #d1ecff">
 
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs" style="height:200px; width:200px; margin-bottom: 30px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs animate" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs animate" style="height:200px; width:200px; margin-bottom: 30px;"></img>
 
 
 		<div class="divider shadowLight">
@@ -166,7 +204,7 @@
 
 	<!--whitepanel-->
 	<div class="row">
-		<div class="col-md-12 shadowLight" style="z-index: 8; background-color: #FFFFFF;">
+		<div class="col-md-12 shadowLight animate" style="z-index: 8; background-color: #FFFFFF;">
 
 			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
 			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs" style="height:200px; width:200px; margin-bottom: 30px;"></img>
@@ -184,10 +222,10 @@
 
 	<!--bluepanel-->
 	<div class="row">
-		<div class="col-md-12 shadowLight" style="z-index: 6; background-color: #d1ecff">
+		<div class="col-md-12 shadowLight animate" style="z-index: 6; background-color: #d1ecff">
 
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs" style="height:200px; width:200px; margin-bottom: 30px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs animate" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs animate" style="height:200px; width:200px; margin-bottom: 30px;"></img>
 
 
 		<div class="divider shadowLight">
@@ -203,11 +241,11 @@
 
 	<!--whitepanel-->
 	<div class="row">
-		<div class="col-md-12 shadowLight" style="z-index: 8; background-color: #FFFFFF;">
+		<div class="col-md-12 shadowLight animate" style="z-index: 8; background-color: #FFFFFF;">
 
 
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs" style="height:200px; width:200px; margin-bottom: 30px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs animate" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs animate" style="height:200px; width:200px; margin-bottom: 30px;"></img>
 
 
 			<h3>Formal Semantics</h3>
@@ -222,10 +260,10 @@
 
 	<!--bluepanel-->
 	<div class="row">
-		<div class="col-md-12 shadowLight" style="z-index: 6; background-color: #d1ecff">
+		<div class="col-md-12 shadowLight animate" style="z-index: 6; background-color: #d1ecff">
 
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs" style="height:200px; width:200px; margin-bottom: 30px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs animate" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs animate" style="height:200px; width:200px; margin-bottom: 30px;"></img>
 
 
 
@@ -242,10 +280,10 @@
 
 	<!--whitepanel-->
 	<div class="row">
-		<div class="col-md-12 shadowLight" style="z-index: 8; background-color: #FFFFFF;" id="TheyCare">
+		<div class="col-md-12 shadowLight animate" style="z-index: 8; background-color: #FFFFFF;" id="TheyCare">
 
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
-			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs" style="height:200px; width:200px; margin-bottom: 30px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="img-fluid shadowLight img-circle center-block visible-xs animate" style="height:200px; width: 200px; margin-bottom: 20px;"></img>
+			<img src="http://wallpapercave.com/wp/20Mx1ca.jpg" class="shadowLight img-circle pull-right hidden-xs animate" style="height:200px; width:200px; margin-bottom: 30px;"></img>
 
 
 			<h3>Separation Logic</h3>
@@ -271,14 +309,14 @@
 
 	<!-- get started -->
 	<div class="row">
-		<div class="col-md-12 text-center shadowLight" style="z-index: 4; background-color: #FFFFFF;">
+		<div class="col-md-12 text-center shadowLight animate" style="z-index: 4; background-color: #FFFFFF;">
 
 			<h3>Final Thoughts</h3>
 			<p>PPLV is a Research Area that underpins most of the modern world's technologies - as such it's a good thing that we have the best researchers in the world working on it.
 			</br>
 			The UCL PPLV Research Group is leading the development of these amazing new technologies.</p>
 
-			<button class="btn btn-lg buttonBlue shadowHeavy">Find out about the Team</button>
+			<button class="btn btn-lg buttonBlue shadowHeavy animate">Find out about the Team</button>
 
 		</div>
 	</div>
@@ -286,7 +324,7 @@
 
 <div class="footer shadowLight navBlue" style="z-index: 12; margin-left: -50;">
 <div class="row">
-	<div class="col-md-6 col-xs-9" style="color: #ffffff;">
+	<div class="col-md-6 col-sm-9 hidden-sm" style="color: #ffffff;">
 		<h4>Site Navigation</h4>
 
 
@@ -300,23 +338,79 @@
 			<p><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></p>
 		</div>
 
-		<div class="col-md-3 col-xs-3" style="color: #ffffff;">
+		<div class="col-md-3 col-xs-3" style="color: #ffffff;" class="transition">
 			<p><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></p>
 		</div>
+	</div>
+
+
+
+	<div class="footer shadowLight navBlue" style="z-index: 12; margin-left: -50;">
+	<div class="row">
+		<div class="col-md-6 col-xs-9 hidden-xs" style="color: #ffffff;">
+			<h4>Site Navigation</h4>
+
+
+			<div class="col-md-3 col-xs-3" style="color: #ffffff; margin-left: 20px; padding-right: 0px;">
+				<p><a href="index.html" style="color: #ffffff;" class="transition">Home</a></p>
+				<p><a href="meta.html#aboutus" style="color: #ffffff;" class="transition">About Us</a></p>
+			</div>
+
+			<div class="col-md-3 col-xs-3" style="color: #ffffff;">
+				<p><a href="research.html" style="color: #ffffff;" class="transition">UCL Research Team</a></p>
+				<p><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></p>
+			</div>
+
+			<div class="col-md-3 col-xs-3" style="color: #ffffff;" class="transition">
+				<p><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></p>
+			</div>
+		</div>
+
+
+
+		<div class="visible-xs col-xs-12 col-sm-12" style="color: #ffffff;">
+			<h4 style="text-align: center;">Site Navigation</h4>
+			<ul style="list-style: none; text-align:center; margin-left:-30px;">
+
+
+
+
+				<li><a href="index.html" style="color: #ffffff;" class="transition">Home</a></li>
+				<li><a href="meta.html#aboutus" style="color: #ffffff;" class="transition">About Us</a></li>
+
+
+				<li><a href="research.html" style="color: #ffffff;" class="transition">UCL Research Team</a></li>
+				<li><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></li>
+
+
+
+				<li><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></li>
+
+
+		</ul>
+
+
+
+		</div>
+
+		<div class="col-xs-12 visible-xs center-block" style="text-align: center; padding: 0vw 30vw;">
+		<h3>Made as part of UCL's IEP</h3>
+		<p>Creative Commons License</p>
+		</div>
+
+
+
+			<div class="row">
+				<div class="col-xs-3 hidden-xs pull-right">
+				<h3>Made as part of UCL's IEP</h3>
+				<p>Creative Commons License</p>
+				</div>
+
+			</div>
 
 
 
 	</div>
-
-		<div class="row">
-			<div class="col-xs-3 pull-right">
-			<h3>Made as part of UCL's IEP</h3>
-			<p>Creative Commons License</p>
-			</div>
-
-		</div>
-
-</div>
-</div>
+	</div>
 </body>
 </html>
