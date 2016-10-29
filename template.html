@@ -16,10 +16,24 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body class="orangeLight">
+
+<div class="container" id="main">
+	<!-- hero image - what is PPLV + explanation -->
+	<div class="row">
+		<div class="col-md-12 text-center blueLight">
+			<h1> What is PPLV? </h1>
+			<p> PPLV is a Computer Science Research Area focused on investigating how rigorous mathematical models can be used in technical endeavors.<br>
+			PPLV stands for Principles of Programming, Logic and Verification, and despite what it's name might suggest, it is not only important in high end computing but actually integral to forming the technology we use everyday.</p>
+			<h4>Let's learn more together...</h4>
+			<span class="glyphicon glyphicon-menu-down visible-sm"></span>
+		</div>
+	</div>
+</div>
+
 
 <!-- Navigation bar -->
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixer hidden-lg hidden-md orangeMain" data-spy="affix" data-offset-top="605" style="margin-bottom: 0;">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcollapse" aria-expanded="false">
@@ -30,7 +44,38 @@
 		</div>
 			
 		<div class="collapse navbar-collapse" id="navcollapse">
-			<ul class="nav navbar-nav navbar-center">
+			<ul class="nav navbar-nav">
+				<li class="active"></li>
+				<li class="dropdown"></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="#">Home</a></li>
+		
+				
+				<li><a href="#"> What is it about</a></li>
+
+				<li><a href="#"> History</a></li>
+
+				<li><a href="#"> Key moments and Impact</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="navbar navbar-fixed-top visible-lg visible-md orangeMain" style="margin-bottom: 0;">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcollapse" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span> Menu </span>
+			</button>
+			<a class="navbar-brand" href="#">PPLV</a>
+		</div>
+			
+		<div class="collapse navbar-collapse" id="navcollapse">
+			<ul class="nav navbar-nav">
+				<li class="active"></li>
 				<li class="dropdown"></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -49,24 +94,13 @@
 </div>
 
 
-
-
 <!-- site content -->
-<div class="container" id="main">
-	<!-- hero image - what is PPLV + explanation -->
-	<div class="row">
-		<div class="col-md-12 text-center">
-			<h1> What is PPLV? </h1>
-			<p> PPLV is a Computer Science Research Area focused on investigating how rigorous mathematical models can be used in technical endeavors.<br>
-			PPLV stands for Principles of Programming, Logic and Verification, and despite what it's name might suggest, it is not only important in high end computing but actually integral to forming the technology we use everyday.</p>
-			<h4>Let's learn more together...</h4>
-			<span class="glyphicon glyphicon-menu-down visible-sm"></span>
-		</div>
-	</div>
+<div class="container" id="content">
+
 	
 	<!-- what will this site tell you? -->
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12 blueMain">
 			<h3> What does this site contain?</h3>
 			<p> This website is aimed at increasing awareness for this field - to us, it seems that such an integral field should lack any proper awareness.<br>
 			We hope to take you through an indepth tour of the area, from an intriguing exploration of PPLV's history, to highlighting any important contributors. We'd also like to indicate our very own University (UCL)'s contributions to this field, and finally wrap it up with an overview of PPLV's impact on the world.</p>
@@ -76,7 +110,7 @@
 	
 	<!-- why does this site exist? -->
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12 blueLight">
 			<h3>So why does this site exist?</h3>
 			<p>This site was made as part of UCL's Integrated Engineering Project -  an attempt by the university to allow it's students to get a better understanding of the research that it does.<br></p>
 			<span class="glyphicon glyphicon-menu-down visible-sm"></span>
@@ -85,7 +119,7 @@
 	
 	<!-- get started -->
 	<div class="row">
-		<div class="col-md-12 text-center">
+		<div class="col-md-12 text-center blueMain">
 			<h3>Get Started</h3>
 			<p>It looks like you've reached the end of the page - try some of the links on the nav bar or...</p>
 			
@@ -94,7 +128,7 @@
 	</div>
 </div>
 
-<div class="footer">
+<div class="footer orangeMain">
 <div class="row">
 	<div class="col-md-3 col-xs-3">
 		<p>Team L's Technical Submission</p>
