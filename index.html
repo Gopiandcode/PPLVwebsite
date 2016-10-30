@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
 <html style="background-color: #BBDEFB">
 <head>
-<title>Alternate Design for the Website</title>
+<title>PPLV - Home Page</title>
 
 <!-- Viewport settings, makes phone resposive displays -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<link rel="icon" href="./img/favi.png">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
@@ -22,7 +24,7 @@
 
 <!-- required files for animations-->
 <script src="./js/jquery.transit.min.js"></script>
-<script src="./js/jquery.scrollTo.js"></script>
+
 
 
 <!-- A bit of Js which allows the hero image to fill the loaded screen -->
@@ -62,6 +64,12 @@ $(window).scroll(function(d,h) {
     });
 });
 
+$(document).click(function(e) {
+    if (!$(e.target).is('a')) {
+        $('.collapse').collapse('hide');
+    }
+});
+
 });
 
 
@@ -87,6 +95,7 @@ $(window).scroll(function(d,h) {
 			<ul class="nav navbar-nav navbar-center">
 				<li class="dropdown"></li>
 			</ul>
+
 			<ul class="nav navbar-nav navbar-right navBlue" style="text-align: center;">
 				<li class="active"><a href="index.html" class="transition">Home</a></li>
 
@@ -115,7 +124,7 @@ $(window).scroll(function(d,h) {
 			<p>This website has been set up by UCL to explain the Computer Science PPLV Research Area.
 			</p>
 			<h4>Scroll down to find out more...</h4>
-			<span class="glyphicon glyphicon-menu-down hidden-xs" style="" onClick="$.scrollTo($('#about'));"></span>
+			<span class="glyphicon glyphicon-menu-down hidden-xs" style="" onClick="$('html, body').animate({scrollTop: $('#about').offset().top}, 1000);"></span>
 		</div>
 	</div>
 	<div id="content" style="margin-top: 0;">
@@ -127,14 +136,14 @@ $(window).scroll(function(d,h) {
 			<p style="font-size: 1.2em; line-height: 2em; padding: 5px" class="animate">PPLV is a research area focused on Computational Logic and it's applications to other areas.</br>Research Projects in this area often either seek to develop new computational logic theories or to use them to create rigorous mathematical models that accurately describe and predict physical systems.</br></br></p>
 			<h4 class="animate">Wait...What on earth does that mean?</h4>
 			</div>
-			<span class="glyphicon glyphicon-menu-down visible-sm animate"></span>
+			<span class="glyphicon glyphicon-menu-down visible-sm animate" onClick="$('html, body').animate({scrollTop: $('#what').offset().top}, 1000);" style="margin-top: 40px;"></span>
 		</div>
 	</div>
 
 	<!-- why does this site exist? -->
 	<div class="row">
 		<div class="col-md-12 shadowLight contentGray mainPage" style="z-index: 6; font-family: 'Open Sans', sans-serif;">
-			<div class="divider shadowLight animate">
+			<div class="divider shadowLight animate" id="what">
 			<h3 class="animate">What is Computational Logic?</br></h3>
 			<p class="animate">As PPLV is a research area based around the core concept of Computational Logic, before moving forward, it's probably best to first <strong><big>explain what logic is...</big></strong><br></br></p>
 			</div>
@@ -166,13 +175,24 @@ $(window).scroll(function(d,h) {
 			<p class="animate">Incidentally, one of the <b>core developments</b> in Computational Logic, which is now used throughout the world to verify imperative programs before release, Separation Logic, was developed by a Researcher at UCL's PPLV department - <b>Peter O'Hearn</b>.</p>
 			</div>
 			</br>
-			<span class="glyphicon glyphicon-menu-down"></span>
+			<span class="glyphicon glyphicon-menu-down" onClick="$('html, body').animate({scrollTop: $('#video').offset().top}, 1000);"></span>
 		</div>
 	</div>
 
+	<div class="row">
+		<div class="col-md-12 text-center shadowLight primaryBlue mainPage animate" style="z-index: 8;" id="video">
+			<div class="embed-responsive embed-responsive-16by9" >
+				<iframe class="embed-responsive-item shadowLight"  src="https://www.youtube.com/embed/ruIVIa9B4Zc"></iframe>
+			</div>
+		</div>
+	</div>
+
+
+
+
 	<!-- get started -->
 	<div class="row">
-		<div class="col-md-12 text-center shadowLight mainPage animate" style="z-index: 8; background-color: #FFFFFF;">
+		<div class="col-md-12 text-center shadowLight mainPage animate" style="z-index: 8; background-color: #FFFFFF;" id="summary">
 			<h3 class="animate">So, What is PPLV?</h3>
 			<p  style="font-size: 1.2em; line-height: 2em; padding: 5px" class="animate">In conclusion, PPLV is a Research Area focused on extending Computational Logic, whether that be within the field itself, or into other disciplines</p>
 			<p>With a basic summary complete, you're probably wondering - how was it developed?</p>

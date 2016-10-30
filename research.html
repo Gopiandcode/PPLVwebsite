@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
 <html style="background-color: #BBDEFB">
 <head>
-<title>Alternate Design for the Website</title>
+<title>PPLV - UCL Research Team</title>
 
 <!-- Viewport settings, makes phone resposive displays -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<link rel="icon" href="./img/favi.png">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
@@ -51,7 +53,11 @@
           if (a < b) $(this).transition({opacity:  1}, 500);
       });
   });
-
+	$(document).click(function(e) {
+	    if (!$(e.target).is('a')) {
+	        $('.collapse').collapse('hide');
+	    }
+	});
 
 	});
 </script>
@@ -84,14 +90,14 @@
 				<li class="dropdown"></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right navBlue" style="text-align: center;">
-				<li class="active"><a href="index.html" class="transition">Home</a></li>
+				<li><a href="index.html" class="transition">Home</a></li>
 
 
 				<li><a href="index.html#about" class="transition">About the Area</a></li>
 
 				<li><a href="history.html" class="transition">History of Area</a></li>
 
-				<li><a href="research.html" class="transition">UCL Research Team</a></li>
+				<li class="active"><a href="research.html" class="transition">UCL Research Team</a></li>
 
 				<li><a href="research.html#impact" class="transition">Impact</a></li>
 
