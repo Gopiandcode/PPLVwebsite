@@ -21,8 +21,8 @@
 
 
 <!-- required files for animations-->
-<link rel="stylesheet" href="./dist/animate.css">
-
+<script src="./js/jquery.transit.min.js"></script>
+<script src="./js/jquery.scrollTo.js"></script>
 
 
 <!-- A bit of Js which allows the hero image to fill the loaded screen -->
@@ -45,18 +45,22 @@ $(document).ready(function() {
 	$("body").css("display", "none");
 	$("body").fadeIn(250);
 
-	effect = $(".animate").fadeTo(0, 0);
+	effect = $(".animate").transition({opacity: 0}, 0);
+
+	effect.each(function(i) {
+			a = $(this).offset().top + $(this).height()/2;
+			b = $(window).scrollTop() + $(window).height();
+			if (a < b) $(this).transition({opacity:  1}, 500);
+	});
+
 
 $(window).scroll(function(d,h) {
     effect.each(function(i) {
         a = $(this).offset().top + $(this).height()/2;
         b = $(window).scrollTop() + $(window).height();
-        if (a < b) $(this).fadeTo(500,1);
+        if (a < b) $(this).transition({opacity:  1}, 500);
     });
 });
-
-
-
 
 });
 
@@ -111,7 +115,7 @@ $(window).scroll(function(d,h) {
 			<p>This website has been set up by UCL to explain the Computer Science PPLV Research Area.
 			</p>
 			<h4>Scroll down to find out more...</h4>
-			<span class="glyphicon glyphicon-menu-down hidden-xs" style=""></span>
+			<span class="glyphicon glyphicon-menu-down hidden-xs" style="" onClick="$.scrollTo($('#about'));"></span>
 		</div>
 	</div>
 	<div id="content" style="margin-top: 0;">
@@ -173,7 +177,7 @@ $(window).scroll(function(d,h) {
 			<p  style="font-size: 1.2em; line-height: 2em; padding: 5px" class="animate">In conclusion, PPLV is a Research Area focused on extending Computational Logic, whether that be within the field itself, or into other disciplines</p>
 			<p>With a basic summary complete, you're probably wondering - how was it developed?</p>
 			<p style="font-size: 1.5em;" class="animate">Let's find out...</p>
-			<button class="btn btn-lg buttonBlue" data-target="verification.html" class="animate">History of Area</button>
+			<a class="btn btn-lg buttonBlue" href="history.html" class="animate">History of Area</a>
 		</div>
 	</div>
 	</div>

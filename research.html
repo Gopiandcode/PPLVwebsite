@@ -15,7 +15,7 @@
 
 
 <!--JS plugins -->
-
+<script src="./js/jquery.transit.min.js"></script>
 
 
 
@@ -36,13 +36,19 @@
 <!--Smooth Transition JS -->
 <script>
 	$(document).ready(function() {
-    effect = $(".animate").fadeTo(0, 0);
+    effect = $(".animate").transition({opacity: 0}, 0);
+
+		effect.each(function(i) {
+				a = $(this).offset().top + $(this).height()/2;
+				b = $(window).scrollTop() + $(window).height();
+				if (a < b) $(this).transition({opacity:  1}, 500);
+		});
 
   $(window).scroll(function(d,h) {
       effect.each(function(i) {
           a = $(this).offset().top + $(this).height()/2;
           b = $(window).scrollTop() + $(window).height();
-          if (a < b) $(this).fadeTo(500,1);
+          if (a < b) $(this).transition({opacity:  1}, 500);
       });
   });
 
@@ -130,9 +136,9 @@
 	<div class="row shadowLight" id="projects">
 		<div class="col-md-12 impact" style="z-index: 6; background-color: #d1ecff; padding-bottom: 5px;">
 		<div class="divider shadowLight">
-			<h3 class="animate">Research Projects and Impacts</h3></div>
+			<h3>Research Projects and Impacts</h3></div>
 			<div class="separator shadowLight">
-			<p class="animate">
+			<p>
 			Once again, for the sake of brevity we haven't been able to cover all the research projects undertaken by the PPLV department, so we've chosen to display a few that we found the most interesting.</p>
 		</div>
 		</div>
@@ -143,8 +149,8 @@
 				<iframe class="embed-responsive-item shadowLight"  src="http://www.youtube.com/embed/mu7JYa7qwaQ"></iframe>
 			</div>
 			<div class="separator shadowLight">
-			<h3 class="animate">Resource Management</h3>
-			<p class="animate">
+			<h3>Resource Management</h3>
+			<p>
 			In the modern day, its....</p>
 			</div>
 		</div>
@@ -155,8 +161,8 @@
 				<iframe class="embed-responsive-item"  src="http://www.youtube.com/embed/c19hpsvr8Qg"></iframe>
 			</div>
 			<div class="separator shadowLight">
-			<h3 class="animate">Productive Security</h3>
-			<p class="animate">
+			<h3>Productive Security</h3>
+			<p>
 			In the modern day, its....</p>
 			</div>
 		</div>
@@ -165,8 +171,8 @@
 				<iframe class="embed-responsive-item"  src="http://www.youtube.com/embed/k0of2Xrg0jM"></iframe>
 			</div>
 			<div class="separator shadowLight">
-			<h3 class="animate">Concurrent Program verification</h3>
-			<p class="animate">
+			<h3>Concurrent Program verification</h3>
+			<p>
 			In the modern day, its....</p>
 			</div>
 
@@ -176,8 +182,8 @@
 				<iframe class="embed-responsive-item"  src="http://www.youtube.com/embed/aElfL4nXzkQ"></iframe>
 			</div>
 			<div class="separator shadowLight">
-			<h3 class="animate">Algebra and Logic for Info-Security</h3>
-			<p class="animate">
+			<h3>Algebra and Logic for Info-Security</h3>
+			<p>
 			In the modern day, its....</p>
 			</div>
 		</div>
@@ -186,10 +192,10 @@
 	<!-- get started -->
 	<div class="row">
 		<div class="col-md-12 text-center shadowLight" style="z-index: 4; background-color: #FFFFFF;">
-			<h3 class="animate">PPLV</h3>
-			<p class="animate">As you can see, PPLV is an area under constant research - any and every development in this field has significant impacts on the field of Computer Science.</p>
+			<h3>PPLV</h3>
+			<p>As you can see, PPLV is an area under constant research - any and every development in this field has significant impacts on the field of Computer Science.</p>
 
-			<button class="btn btn-lg buttonBlue shadowHeavy">Move on to Logic</button>
+			<a class="btn btn-lg buttonBlue shadowHeavy" href="meta.html">About this Site</a>
 		</div>
 	</div>
 </div>
