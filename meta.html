@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
 <html style="background-color: #BBDEFB">
 <head>
-<title>Alternate Design for the Website</title>
+<title>PPLV - About</title>
 
 <!-- Viewport settings, makes phone resposive displays -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<link rel="icon" href="./img/favi.png">
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -47,7 +49,11 @@
 	        if (a < b) $(this).transition({opacity:  1}, 500);
 	    });
 	});
-
+	$(document).click(function(e) {
+	    if (!$(e.target).is('a')) {
+	        $('.collapse').collapse('hide');
+	    }
+	});
 
 	});
 </script>
@@ -75,7 +81,7 @@
 				<li class="dropdown"></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right navBlue" style="text-align: center;">
-				<li class="active"><a href="index.html" class="transition">Home</a></li>
+				<li><a href="index.html" class="transition">Home</a></li>
 
 
 				<li><a href="index.html#about" class="transition">About the Area</a></li>
@@ -86,7 +92,7 @@
 
 				<li><a href="research.html#impact" class="transition">Impact</a></li>
 
-				<li><a href="meta.html" class="transition">About this site</a></li>
+				<li class="active"><a href="meta.html" class="transition">About this site</a></li>
 			</ul>
 		</div>
 	</div>
@@ -105,7 +111,7 @@
 			It was made as part of UCL's Integrated Engineering Project -  an attempt by the university to allow it's students to get a better understanding of the research that it does.</br>
 			We hope to take you through an indepth tour of the area, from an intriguing exploration of PPLV's history, to highlighting any important contributors. We'd also like to indicate our very own University (UCL)'s contributions to this field, and finally wrap it up with an overview of PPLV's impact on the world.</p>
 			<h3>This page is about the site itself (+ it's authors), and citations for the information.</h3>
-			<span class="glyphicon glyphicon-menu-down visible-sm"></span>
+
 		</div>
 
 	</div>
