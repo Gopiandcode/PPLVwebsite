@@ -21,17 +21,30 @@
 <!-- custom theme -->
 <link rel="stylesheet" type="text/css" href="style.css">
 
+<!--Js Plugins -->
+
+<script src="./js/jquery.transit.min.js"></script>
+
+
+
 
 <!--Smooth Transition JS -->
 <script>
 	$(document).ready(function() {
-		effect = $(".animate").fadeTo(0, 0);
+		effect = $(".animate").transition({opacity: 0}, 0);
+
+
+		effect.each(function(i) {
+				a = $(this).offset().top + $(this).height()/2;
+				b = $(window).scrollTop() + $(window).height();
+				if (a < b) $(this).transition({opacity:  1}, 500);
+		});
 
 	$(window).scroll(function(d,h) {
 	    effect.each(function(i) {
 	        a = $(this).offset().top + $(this).height()/2;
 	        b = $(window).scrollTop() + $(window).height();
-	        if (a < b) $(this).fadeTo(500,1);
+	        if (a < b) $(this).transition({opacity:  1}, 500);
 	    });
 	});
 
@@ -213,7 +226,7 @@
 			Hopefully, we've managed to give you an understanding of what PPLV is, and why it's important.</br>
 			Below are a few links that are good sources to find out more about this subject:</p>
 
-			<button class="btn btn-lg buttonBlue shadowHeavy">Move on to Logic</button>
+			<a class="btn btn-lg buttonBlue shadowHeavy" href="index.html">Back to Start</a>
 		</div>
 	</div>
 </div>

@@ -17,6 +17,11 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+<!-- Js Plugin Files -->
+<script src="./js/jquery.transit.min.js"></script>
+
+
+
 
 <!-- custom theme -->
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -25,13 +30,13 @@
 <!--Smooth Transition JS -->
 <script>
 	$(document).ready(function() {
-		effect = $(".animate").fadeTo(0, 0);
+		effect = $(".animate").transition({opacity: 0}, 0);
 
 	$(window).scroll(function(d,h) {
 	    effect.each(function(i) {
 	        a = $(this).offset().top + $(this).height()/2;
 	        b = $(window).scrollTop() + $(window).height();
-	        if (a < b) $(this).fadeTo(500,1);
+	        if (a < b) $(this).transition({opacity:  1}, 500);
 	    });
 	});
 
@@ -316,7 +321,7 @@
 			</br>
 			The UCL PPLV Research Group is leading the development of these amazing new technologies.</p>
 
-			<button class="btn btn-lg buttonBlue shadowHeavy animate">Find out about the Team</button>
+			<a class="btn btn-lg buttonBlue shadowHeavy animate" href="research.html">Find out about the Researchers</a>
 
 		</div>
 	</div>
@@ -324,7 +329,7 @@
 
 <div class="footer shadowLight navBlue" style="z-index: 12; margin-left: -50;">
 <div class="row">
-	<div class="col-md-6 col-sm-9 hidden-sm" style="color: #ffffff;">
+	<div class="col-md-6 col-xs-9 hidden-xs" style="color: #ffffff;">
 		<h4>Site Navigation</h4>
 
 
@@ -345,72 +350,49 @@
 
 
 
-	<div class="footer shadowLight navBlue" style="z-index: 12; margin-left: -50;">
-	<div class="row">
-		<div class="col-md-6 col-xs-9 hidden-xs" style="color: #ffffff;">
-			<h4>Site Navigation</h4>
-
-
-			<div class="col-md-3 col-xs-3" style="color: #ffffff; margin-left: 20px; padding-right: 0px;">
-				<p><a href="index.html" style="color: #ffffff;" class="transition">Home</a></p>
-				<p><a href="meta.html#aboutus" style="color: #ffffff;" class="transition">About Us</a></p>
-			</div>
-
-			<div class="col-md-3 col-xs-3" style="color: #ffffff;">
-				<p><a href="research.html" style="color: #ffffff;" class="transition">UCL Research Team</a></p>
-				<p><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></p>
-			</div>
-
-			<div class="col-md-3 col-xs-3" style="color: #ffffff;" class="transition">
-				<p><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></p>
-			</div>
-		</div>
-
-
-
-		<div class="visible-xs col-xs-12 col-sm-12" style="color: #ffffff;">
-			<h4 style="text-align: center;">Site Navigation</h4>
-			<ul style="list-style: none; text-align:center; margin-left:-30px;">
+	<div class="visible-xs col-xs-12 col-sm-12" style="color: #ffffff;">
+		<h4 style="text-align: center;">Site Navigation</h4>
+		<ul style="list-style: none; text-align:center; margin-left:-30px;">
 
 
 
 
-				<li><a href="index.html" style="color: #ffffff;" class="transition">Home</a></li>
-				<li><a href="meta.html#aboutus" style="color: #ffffff;" class="transition">About Us</a></li>
+			<li><a href="index.html" style="color: #ffffff;" class="transition">Home</a></li>
+			<li><a href="meta.html#aboutus" style="color: #ffffff;" class="transition">About Us</a></li>
 
 
-				<li><a href="research.html" style="color: #ffffff;" class="transition">UCL Research Team</a></li>
-				<li><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></li>
-
-
-
-				<li><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></li>
-
-
-		</ul>
+			<li><a href="research.html" style="color: #ffffff;" class="transition">UCL Research Team</a></li>
+			<li><a href="meta.html#contact" style="color: #ffffff;" class="transition">Contact Us</a></li>
 
 
 
-		</div>
-
-		<div class="col-xs-12 visible-xs center-block" style="text-align: center; padding: 0vw 30vw;">
-		<h3>Made as part of UCL's IEP</h3>
-		<p>Creative Commons License</p>
-		</div>
+			<li><a href="meta.html#citations" style="color: #ffffff;" class="transition">References Page</a></li>
 
 
-
-			<div class="row">
-				<div class="col-xs-3 hidden-xs pull-right">
-				<h3>Made as part of UCL's IEP</h3>
-				<p>Creative Commons License</p>
-				</div>
-
-			</div>
+	</ul>
 
 
 
 	</div>
+
+	<div class="col-xs-12 visible-xs center-block" style="text-align: center; padding: 0vw 30vw;">
+	<h3>Made as part of UCL's IEP</h3>
+	<p>Creative Commons License</p>
 	</div>
+
+
+
+		<div class="row">
+			<div class="col-xs-3 hidden-xs pull-right">
+			<h3>Made as part of UCL's IEP</h3>
+			<p>Creative Commons License</p>
+			</div>
+
+		</div>
+
+
+
+</div>
+</div>
 </body>
 </html>
