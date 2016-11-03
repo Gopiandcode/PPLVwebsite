@@ -39,6 +39,7 @@
 <script>
 	$(document).ready(function() {
     effect = $(".animate").transition({opacity: 0}, 0);
+		effectslow = $(".animate-slow").transition({opacity: 0}, 0);
 
 		effect.each(function(i) {
 				a = $(this).offset().top + $(this).height()/2;
@@ -53,6 +54,24 @@
           if (a < b) $(this).transition({opacity:  1}, 500);
       });
   });
+
+	effectslow.each(function(i) {
+			a = $(this).offset().top - $(this).height()/8;
+			b = $(window).scrollTop() + $(window).height();
+			if (a < b) $(this).transition({opacity:  1}, 500);
+	});
+
+	$(window).scroll(function(d,h) {
+		effectslow.each(function(i) {
+				a = $(this).offset().top - $(this).height()/8;
+				b = $(window).scrollTop() + $(window).height();
+				if (a < b) $(this).transition({opacity:  1}, 500);
+		});
+	});
+
+
+
+
 	$(document).click(function(e) {
 	    if (!$(e.target).is('a')) {
 	        $('.collapse').collapse('hide');
@@ -82,15 +101,16 @@
 				<span class="sr-only">Toggle navigation</span>
 				<span> Menu </span>
 			</button>
-			<a class="navbar-brand navBlue" href="index.html" class="transition">PPLV</a>
+			 <a class="navbar-brand navBlue transition" href="index.html">PPLV</a>
 		</div>
 
 		<div class="collapse navbar-collapse" id="navcollapse">
 			<ul class="nav navbar-nav navbar-center">
 				<li class="dropdown"></li>
 			</ul>
+
 			<ul class="nav navbar-nav navbar-right navBlue" style="text-align: center;">
-				<li><a href="index.html" class="transition">Home</a></li>
+				<li class=""><a href="index.html" class="transition">Home</a></li>
 
 
 				<li><a href="index.html#about" class="transition">About the Area</a></li>
@@ -137,18 +157,26 @@
 			<div class="col-md-4" style="z-index: 8; background-color: #FFFFFF;">
 			<img src="http://www0.cs.ucl.ac.uk/people/photos/D.Pym.jpg" class="img-fluid center-block shadowLight img-circle" style="height:200px; width: 200px; margin-bottom: 10px; margin-top: 5px;"></img>
 		</div>
-		<div class="col-md-8" style="z-index: 8; background-color: #FFFFFF;">
+		<div class="col-md-8 hidden-xs" style="z-index: 8; background-color: #FFFFFF;">
 			<h4 style="font-size: 1.9em;"><b>Professor David Pym</b></h4>
 			<p style="font-size: 1.3em; line-height: 1.7em;"> The current head of PPLV and one of the foremost Researchers in this field, David Pym has played crucial roles through his proposition of Bunched Logic, a variant of Logic which has aided the development of verification tools. David is currently looking into Economic implementations of Computational Logic, as well as further researching into his areas of interest including Security Management, Logic, and Systems Modelling.   </p>
+		</div>
+		<div class="col-md-8 visible-xs" style="z-index: 8; background-color: #FFFFFF;">
+			<h4 style="font-size: 1.9em; text-align:center;"><b>Professor David Pym</b></h4>
+			<p style="font-size: 1.2em; line-height: 1.5em; text-align:center;"> The current head of PPLV and one of the foremost Researchers in this field, David Pym has played crucial roles through his proposition of Bunched Logic, a variant of Logic which has aided the development of verification tools. David is currently looking into Economic implementations of Computational Logic, as well as further researching into his areas of interest including Security Management, Logic, and Systems Modelling.   </p>
 		</div>
 		</div>
 		<div class="col-md-12" style="z-index: 8; background-color: #FFFFFF;"  style="height:200px; width: 200px; margin-bottom: 10px; margin-top: 5px;">
 			<div class="col-md-4" style="z-index: 8; background-color: #FFFFFF;">
 			<img src="http://www0.cs.ucl.ac.uk/staff/p.ohearn/pete.jpg" class="img-fluid center-block shadowLight img-circle" style="height:200px; width: 200px; margin-bottom: 20px; margin-top: 10px;"></img>
 		</div>
-		<div class="col-md-8" style="z-index: 8; background-color: #FFFFFF;">
+		<div class="col-md-8 hidden-xs" style="z-index: 8; background-color: #FFFFFF;">
 			<h4 style="font-size: 1.9em;"><b>Professor Peter O'Hearn</b></h4>
 			<p style="font-size: 1.3em; line-height: 1.7em;"> Peter O’Hearn also proposed the concept of Bunched Logic as well as Separation Logic, which have further contributed to the development of automated verification. Peter is most notably known for being the Engineering Manager for Facebook, aiding the development of Facebook’s static analyser tool, Facebook Infer, used by prominent companies such as Facebook, Instagram and Whatsapp.</p>
+		</div>
+		<div class="col-md-8 visible-xs" style="z-index: 8; background-color: #FFFFFF;">
+			<h4 style="font-size: 1.9em; text-align:center;"><b>Professor Peter O'Hearn</b></h4>
+			<p style="font-size: 1.2em; line-height: 1.5em; text-align:center;"> Peter O’Hearn also proposed the concept of Bunched Logic as well as Separation Logic, which have further contributed to the development of automated verification. Peter is most notably known for being the Engineering Manager for Facebook, aiding the development of Facebook’s static analyser tool, Facebook Infer, used by prominent companies such as Facebook, Instagram and Whatsapp.</p>
 		</div>
 		</div>
 
@@ -169,23 +197,23 @@
 </div>
 
 		<div class="divider shadowLight" style="padding-left: 15px; padding-right: 15px;">
-            <h4 style="font-size: 1.3em; line-height: 1.7em;"><strong> Gaming Market ( Boosted automatic verification Research Project )</strong></h4>
-<p align="justify" style="font-size: 1.14em; line-height: 1.7em;">
-The core code (known as kernel code) for the Graphical Processing Unit (GPU), is responsible for ensuring a high frame rate, smooth gameplay and a good visual appearnce. This code is now being developed by automatic verification algorithims developed by researchers in PPLV.<br>
-The kernel code is the low level code required for the GPU to function - previously it was developed and tested by humans, however, thanks to PPLV, it is now being developed using automatic verification algorithms. These algorithms find a way to maxmimise memory usage and identify bugs faster than any human could.
+            <h4 style="font-size: 1.3em; line-height: 1.7em;"><strong> Gaming Market ( Boosted automatic verification Research Project )</strong><sup><a href="meta.html#h4-research">[1]</a></sup></h4>
+<p align="" style="font-size: 1.14em; line-height: 1.7em;">
+<br>The core code (known as kernel code) for the Graphical Processing Unit (GPU), is responsible for ensuring a high frame rate, smooth gameplay and a good visual appearnce. This code is now being developed by automatic verification algorithims developed by researchers in PPLV.<br></br>
+The kernel code is the low level code required for the GPU to function - previously it was developed and tested by humans, however, thanks to PPLV, it is now being developed using automatic verification algorithms. These algorithms find a way to maxmimise memory usage and identify bugs faster than any human could.</br></br>
 These increases in efficiency may be one of the main factors in the UK gaming industry's recent economic growth - there is currently a high demand for GPUs.
 </p>
 </div>
 		<div class="divider shadowLight" style="padding-left: 15px; padding-right: 15px;">
-<h4 style="font-size: 1.3em; line-height: 1.7em;"> Phone industry ( Program Verification Research Project )</h4>
-<p align="justify" style="font-size: 1.14em; line-height: 1.7em;">
-Researchers at UCL also helped to develop Separation Logic and Bunched Logic, which are revolutionary new Logical models which allow imperative programs (written in languages such as C, Python, etc.) to be automatically verified. The results of these discoveries are used by FaceBook in their <a>INFER project</a>, which is used to check phone applications for memory leaks and other problems. This facilitates the quick development of code for mobile devices. Currently there are over 250,000,000 android phones alone in use, all running similarly checked software, so it's easy to see how this development has actually shaped the modern world as we know it.
+<h4 style="font-size: 1.3em; line-height: 1.7em;"> Phone industry ( Program Verification Research Project )<sup><a href="meta.html#h4-research">[2]</a></sup></h4>
+<p align="" style="font-size: 1.14em; line-height: 1.7em;">
+<br>Researchers at UCL also helped to develop Separation Logic and Bunched Logic, which are revolutionary new Logical models which allow imperative programs (written in languages such as C, Python, etc.) to be automatically verified.</br></br> The results of these discoveries are used by FaceBook in their <a>INFER project</a>, which is used to check phone applications for memory leaks and other problems. This facilitates the quick development of code for mobile devices. Currently there are over 250,000,000 android phones alone in use, all running similarly checked software, so it's easy to see how this development has actually shaped the modern world as we know it.
 </p>
 </div>
 		<div class="divider shadowLight" style="padding-left: 15px; padding-right: 15px;">
-<h4 style="font-size: 1.3em; line-height: 1.7em;"> Business Sector ( Algebra and Logic for Policy and Utility in Information Security Project )</h4>
- <p align="justify" style="font-size: 1.14em; line-height: 1.7em;">
-By producing a universal way of representing security issues within a system, managers within the industry can more easily model their policies to be sustainable, effective and affordable. For example  environmental polciies such as recycling machines and paper and conforming to specfic laws within a country. By using algebra and logic as a foundation to create models this addresses security flaws within organisations in relation to national laws, regulations and agreements.
+<h4 style="font-size: 1.3em; line-height: 1.7em;"> Business Sector ( Algebra and Logic for Policy and Utility in Information Security Project )<sup><a href="meta.html#h4-research">[3]</a></sup></h4>
+ <p align="" style="font-size: 1.14em; line-height: 1.7em;">
+By producing a universal way of representing security issues within a system, managers within the industry can more easily model their policies to be sustainable, effective and affordable.</br></br> For example  environmental polciies such as recycling machines and paper and conforming to specfic laws within a country. By using algebra and logic as a foundation to create models this addresses security flaws within organisations in relation to national laws, regulations and agreements.
     </p>
 </div>
 <div class="divider shadowLight" style="padding-left: 15px; padding-right: 15px; margin-top: 60px">
@@ -213,7 +241,7 @@ By producing a universal way of representing security issues within a system, ma
 
 			<p>
 
-			How can we efficiently allocate memory?
+			Developing automated methods of replicating the process done py programmers as they analyse the way their program handles resources or extending current computational logical models (separation logic, bunched logic) to other fields - such as using it to manage food or financial resources.
 
 		</p>
 	</center>
@@ -230,7 +258,7 @@ By producing a universal way of representing security issues within a system, ma
 				<center>
 			<h3>Productive Security</h3>
 			<p>
-			How effective are security measures really?</p>
+			Developing systems to determine the actual effectiveness of security measures based off previous data - which unlike current frameworks in place accounts for the "missing link" variables such as employee workload and risk perception to more accurately predict employee behaviour.</p>
 		</center>
 			</div>
 		</div>
@@ -242,7 +270,7 @@ By producing a universal way of representing security issues within a system, ma
 				<center>
 			<h3>Concurrent Program verification</h3>
 			<p>
-			How software can be tested before it is released</p>
+			Developing new automated methods of checking whether code is semantically correct (does what it's meant to) using Separation Logic. Current methods rely on hard coded identifiers for data structures which means that the verification will fail if an unknown data structure is found.</p>
 		</center>
 			</div>
 
@@ -255,7 +283,7 @@ By producing a universal way of representing security issues within a system, ma
 				<center>
 			<h3>Algebra and Logic for Info-Security</h3>
 			<p>
-			The maths behind cracking passwords</p>
+			Developing automated methods of replicating the process done py programmers as they analyse the way their program handles resources or extending current computational logical models (separation logic, bunched logic) to other fields - such as using it to manage food or financial resources.</p>
 		</center>
 			</div>
 		</div>
@@ -279,19 +307,34 @@ By producing a universal way of representing security issues within a system, ma
 			<a class="btn btn-lg buttonBlue shadowHeavy" href="meta.html">About this Site</a>
 		</div>
 	</div> -->
-	<div class="row">
+	<div class="row hidden-xs">
 		<div class="col-md-12 text-center mainPage animate shadowLight" style="z-index: 4; background-color: #FFFFFF;">
-			<h3 class="animate">What Next?</h3>
+			<h3 class="animateslow">What Next?</h3>
 			<p  style="font-size: 1.3em; line-height: 2.2em; padding: 5px" class="animate">As you can see, PPLV is a research area under constant development by some of the best researchers in the world. It's research has huge impacts on how computers programs are developed and tested.</br>
 			UCL's PPLV research department plays a key role in this field, with many of it's researchers having worked on projects that have literally changed the world. To us, as undergrad Computer Science students, it's humbling to see how approachable these foremost researchers are, and how willing they were to offer us advice on building this website.</br>
 			Looking toward the future, possible new projects in the field of PPLV may be with relation to self-driving cars. With recent improvements in self-driving car technologies and companies such as Google beginnign to create the first self-driving cars, self-driving cars seem to be just around the corner - however before we adopt this technology, we have to devise methods of ensuring that these algorithms will not lead to a crash.</p>
 
 				<p  style="font-size: 1.3em; line-height: 2.2em; padding: 5px" class="animate"></p>
 				<p></p>
-				<p class="animate">We've also included a brief section about this page and it's authors:</p>
+				<p class="animateslow">We've also included a brief section about this page and it's authors:</p>
 				<a class="btn btn-lg buttonBlue shadowHeavy" href="meta.html" class="animate">About the Site</a>
 		</div>
 	</div>
+
+	<div class="row visible-xs">
+		<div class="col-md-12 text-center mainPage animate shadowLight" style="z-index: 4; background-color: #FFFFFF;">
+			<h3 class="animateslow">What Next?</h3>
+			<p class="animateslow">As you can see, PPLV is a research area under constant development by some of the best researchers in the world. It's research has huge impacts on how computers programs are developed and tested.</br></br>
+			UCL's PPLV research department plays a key role in this field, with many of it's researchers having worked on projects that have literally changed the world. To us, as undergrad Computer Science students, it's humbling to see how approachable these foremost researchers are, and how willing they were to offer us advice on building this website.</br></br>
+			Looking toward the future, possible new projects in the field of PPLV may be with relation to self-driving cars. With recent improvements in self-driving car technologies and companies such as Google beginnign to create the first self-driving cars, self-driving cars seem to be just around the corner - however before we adopt this technology, we have to devise methods of ensuring that these algorithms will not lead to a crash.</p>
+
+				<p class="animateslow"></p>
+				<p></p>
+				<p class="animate">We've also included a brief section about this website and it's authors:</br></p>
+				<a class="btn btn-lg buttonBlue shadowHeavy" href="meta.html" class="animate">About the Site</a>
+		</div>
+	</div>
+
 
 </div>
 
