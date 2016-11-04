@@ -55,6 +55,28 @@
 	    }
 	});
 
+
+effectslow = $(".animate-slow").transition({opacity: 0}, 0);
+effectslow.each(function(i) {
+		a = $(this).offset().top - $(this).height()/4;
+		b = $(window).scrollTop() + $(window).height();
+		if (a < b) $(this).transition({opacity:  1}, 500);
+});
+
+$(window).scroll(function(d,h) {
+	effectslow.each(function(i) {
+			a = $(this).offset().top - $(this).height()/4;
+			b = $(window).scrollTop() + $(window).height();
+			if (a < b) $(this).transition({opacity:  1}, 500);
+	});
+});
+
+
+
+
+
+
+
 	});
 </script>
 
@@ -220,7 +242,7 @@ dl {
 			</center>
 		</div>
 
-		<div class="col-md-12 animate" style="z-index: 4; background-color: #FFFFFF; padding-top: 10px; padding-bottom: 10px;" id="h4-history">
+		<div class="col-md-12 animate-slow" style="z-index: 4; background-color: #FFFFFF; padding-top: 10px; padding-bottom: 10px;" id="h4-history">
 			<center>
 			<h3>History of PPLV Section - References</h3>
 			<dl class="">
@@ -254,7 +276,7 @@ dl {
 		</center>
 		</div>
 
-		<div class="col-md-12 contentGray animate" style="z-index: 4; padding-top: 10px; padding-bottom: 10px;" id="h4-research">
+		<div class="col-md-12 contentGray animate-slow" style="z-index: 4; padding-top: 10px; padding-bottom: 10px;" id="h4-research">
 					<center>
 			<h3>UCL PPLV Research Section - References</h3>
 			<dl class="">
