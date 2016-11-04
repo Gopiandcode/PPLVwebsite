@@ -116,7 +116,7 @@ div#hero > div{
 
 		),
 
-	url(https://static.independent.co.uk/s3fs-public/styles/article_large/public/thumbnails/image/2016/05/05/12/hackersing.jpg);
+	url(./img/bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
