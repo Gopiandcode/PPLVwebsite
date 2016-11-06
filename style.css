@@ -17,6 +17,11 @@
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:700');
 
+.beauty-text {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
 .img-circle {
 
 	border-radius: 50%;
